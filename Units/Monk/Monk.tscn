@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://v4ulryg54g7n"]
+
+[ext_resource type="SpriteFrames" uid="uid://8g4rtaprq7up" path="res://Units/Monk/Monk.tres" id="1_eaobq"]
+[ext_resource type="Shape2D" uid="uid://xih0j6kv42xn" path="res://Units/generic_unit_environment_collider.tres" id="2_8x4yc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqgm5"]
+radius = 21.0
+height = 64.0
+
+[node name="Monk" type="CharacterBody2D" unique_id=1711342334]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1721067374]
+position = Vector2(0, -32)
+sprite_frames = ExtResource("1_eaobq")
+animation = &"black_attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153331821]
+rotation = 1.5707964
+shape = ExtResource("2_8x4yc")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=511992558]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1387841682]
+position = Vector2(-2, -32)
+shape = SubResource("CapsuleShape2D_gqgm5")

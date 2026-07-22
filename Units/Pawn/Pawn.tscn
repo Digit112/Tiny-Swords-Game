@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cbeal57vp4pe2"]
+
+[ext_resource type="SpriteFrames" uid="uid://btiqmems2bhaw" path="res://Units/Pawn/Pawn.tres" id="1_nuvnf"]
+[ext_resource type="Shape2D" uid="uid://xih0j6kv42xn" path="res://Units/generic_unit_environment_collider.tres" id="2_stey8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bccar"]
+radius = 21.0
+height = 64.0
+
+[node name="Pawn" type="CharacterBody2D" unique_id=1711342334]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1721067374]
+position = Vector2(0, -32)
+sprite_frames = ExtResource("1_nuvnf")
+animation = &"blue_use_knife"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153331821]
+rotation = 1.5707964
+shape = ExtResource("2_stey8")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1486824702]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=32575141]
+position = Vector2(-2, -32)
+shape = SubResource("CapsuleShape2D_bccar")

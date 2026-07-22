@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b6uqe3su4pv36"]
+
+[ext_resource type="SpriteFrames" uid="uid://cod27mai1irxs" path="res://Units/Lancer/Lancer.tres" id="1_6m73r"]
+[ext_resource type="Shape2D" uid="uid://xih0j6kv42xn" path="res://Units/generic_unit_environment_collider.tres" id="2_wc76j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6m73r"]
+radius = 21.0
+height = 64.0
+
+[node name="Lancer" type="CharacterBody2D" unique_id=1711342334]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1721067374]
+position = Vector2(0, -33)
+sprite_frames = ExtResource("1_6m73r")
+animation = &"black_attack_down"
+frame_progress = 0.878548
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153331821]
+rotation = 1.5707964
+shape = ExtResource("2_wc76j")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=397968318]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1320714367]
+position = Vector2(-2, -32)
+shape = SubResource("CapsuleShape2D_6m73r")
