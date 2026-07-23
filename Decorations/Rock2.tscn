@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://334e47q4rgq8"]
+
+[ext_resource type="Texture2D" uid="uid://x5q634do1pu4" path="res://Assets/Tiny Swords/Terrain/Decorations/Rocks/Rock2.png" id="1_18oky"]
+
+[node name="Rock2" type="Sprite2D" unique_id=1456692933]
+texture = ExtResource("1_18oky")

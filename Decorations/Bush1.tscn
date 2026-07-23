@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cgy7833vhlk1x"]
+
+[ext_resource type="Texture2D" uid="uid://dlsrvs5331lfk" path="res://Assets/Tiny Swords/Terrain/Decorations/Bushes/Bushe1.png" id="1_nnd1a"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/PlayDefaultTool.gd" id="2_o8f85"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8f85"]
+atlas = ExtResource("1_nnd1a")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f618v"]
+atlas = ExtResource("1_nnd1a")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76mua"]
+atlas = ExtResource("1_nnd1a")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjpt5"]
+atlas = ExtResource("1_nnd1a")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm8ej"]
+atlas = ExtResource("1_nnd1a")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wki4v"]
+atlas = ExtResource("1_nnd1a")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj46r"]
+atlas = ExtResource("1_nnd1a")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yt24"]
+atlas = ExtResource("1_nnd1a")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kwuod"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8f85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f618v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76mua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjpt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm8ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wki4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tj46r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yt24")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Bush1" type="AnimatedSprite2D" unique_id=1602402288]
+sprite_frames = SubResource("SpriteFrames_kwuod")
+script = ExtResource("2_o8f85")

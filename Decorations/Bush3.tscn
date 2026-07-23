@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://3muw8k7siwba"]
+
+[ext_resource type="Texture2D" uid="uid://dxrqwvedwfmu7" path="res://Assets/Tiny Swords/Terrain/Decorations/Bushes/Bushe3.png" id="1_xuinr"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/PlayDefaultTool.gd" id="2_6pgrg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pgrg"]
+atlas = ExtResource("1_xuinr")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_53sfv"]
+atlas = ExtResource("1_xuinr")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28xsg"]
+atlas = ExtResource("1_xuinr")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytjy7"]
+atlas = ExtResource("1_xuinr")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3rq0"]
+atlas = ExtResource("1_xuinr")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5o6g"]
+atlas = ExtResource("1_xuinr")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e4o5"]
+atlas = ExtResource("1_xuinr")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g7ue"]
+atlas = ExtResource("1_xuinr")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wfgkn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pgrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_53sfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28xsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytjy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3rq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5o6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e4o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g7ue")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Bush3" type="AnimatedSprite2D" unique_id=753430760]
+sprite_frames = SubResource("SpriteFrames_wfgkn")
+script = ExtResource("2_6pgrg")

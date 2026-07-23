@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bnpu3cd05abp6"]
+
+[ext_resource type="Texture2D" uid="uid://dv4gm814hcu3x" path="res://Assets/Tiny Swords/Terrain/Decorations/Bushes/Bushe4.png" id="1_uoh3g"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/PlayDefaultTool.gd" id="2_d08ut"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d08ut"]
+atlas = ExtResource("1_uoh3g")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgmrq"]
+atlas = ExtResource("1_uoh3g")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtnjb"]
+atlas = ExtResource("1_uoh3g")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw7u6"]
+atlas = ExtResource("1_uoh3g")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_or7or"]
+atlas = ExtResource("1_uoh3g")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgivp"]
+atlas = ExtResource("1_uoh3g")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrs4d"]
+atlas = ExtResource("1_uoh3g")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdiys"]
+atlas = ExtResource("1_uoh3g")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56ls2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d08ut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgmrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtnjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw7u6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_or7or")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgivp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrs4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdiys")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Bush4" type="AnimatedSprite2D" unique_id=1411334551]
+sprite_frames = SubResource("SpriteFrames_56ls2")
+frame_progress = 0.04650161
+script = ExtResource("2_d08ut")
