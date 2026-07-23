@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://cvl0d010u8k8i"]
 
 [ext_resource type="SpriteFrames" uid="uid://beb1nb3qyvm3u" path="res://Units/Archer/Archer.tres" id="1_vh1ql"]
-[ext_resource type="Shape2D" uid="uid://xih0j6kv42xn" path="res://Units/generic_unit_environment_collider.tres" id="2_qhkjl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vh1ql"]
+radius = 8.0
+height = 32.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kwuod"]
 radius = 21.0
@@ -13,13 +16,15 @@ height = 64.0
 position = Vector2(0, -32)
 sprite_frames = ExtResource("1_vh1ql")
 animation = &"black_idle"
-frame_progress = 0.8098263
+frame_progress = 0.5236525
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153331821]
+visible = false
 rotation = 1.5707964
-shape = ExtResource("2_qhkjl")
+shape = SubResource("CapsuleShape2D_vh1ql")
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=434375308]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=2029591601]
 position = Vector2(-2, -32)
