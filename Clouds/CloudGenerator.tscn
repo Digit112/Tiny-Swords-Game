@@ -4,3 +4,4 @@
 
 [node name="CloudGenerator" type="Node2D" unique_id=149536328]
 script = ExtResource("1_whmxg")
+do_use_active_camera_rect = true
