@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://41f4nrxjar6x"]
+
+[ext_resource type="PackedScene" uid="uid://cism50t3jyib7" path="res://Enemies/Caveborn/Turtle.tscn" id="1_tnigi"]
+[ext_resource type="Script" uid="uid://dudyqtofjyk5a" path="res://Scripts/Meander.gd" id="2_7ep8x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5ivm"]
+
+[node name="MeanderingTurt" type="Node2D" unique_id=117861599]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1891323576]
+motion_mode = 1
+script = ExtResource("2_7ep8x")
+
+[node name="Turtle" parent="CharacterBody2D" unique_id=53842217 instance=ExtResource("1_tnigi")]
+unique_name_in_owner = true
+position = Vector2(488, 364)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1701237700]
+shape = SubResource("CircleShape2D_v5ivm")

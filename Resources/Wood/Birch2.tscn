@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://bvoiedebk0oa1"]
+
+[ext_resource type="Texture2D" uid="uid://ljpp2ct34y45" path="res://Assets/Tiny Swords/Terrain/Resources/Wood/Trees/Tree4.png" id="1_jy607"]
+[ext_resource type="Texture2D" uid="uid://dm4dxyymhs40r" path="res://Assets/Tiny Swords/Terrain/Resources/Wood/Trees/Stump 4.png" id="2_naeje"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_naeje"]
+atlas = ExtResource("1_jy607")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3m5l"]
+atlas = ExtResource("1_jy607")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84n2j"]
+atlas = ExtResource("1_jy607")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip2jh"]
+atlas = ExtResource("1_jy607")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mhne"]
+atlas = ExtResource("1_jy607")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fgpb"]
+atlas = ExtResource("1_jy607")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e56ik"]
+atlas = ExtResource("1_jy607")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qlvh"]
+atlas = ExtResource("1_jy607")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykgkp"]
+atlas = ExtResource("2_naeje")
+region = Rect2(0, 64, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3rqrx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_naeje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3m5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84n2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ip2jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mhne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fgpb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e56ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qlvh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykgkp")
+}],
+"loop": 1,
+"name": &"stump",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_naeje"]
+radius = 8.0
+
+[node name="Birch2" type="AnimatedSprite2D" unique_id=683025335]
+sprite_frames = SubResource("SpriteFrames_3rqrx")
+frame_progress = 0.8062328
+offset = Vector2(0, -64)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=260548522]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1163915966]
+position = Vector2(2, -5)
+shape = SubResource("CircleShape2D_naeje")

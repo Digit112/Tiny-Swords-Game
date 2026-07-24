@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://x1c1gdmqwimu"]
+
+[ext_resource type="Texture2D" uid="uid://bu38id5t532a1" path="res://Assets/Tiny Swords/Terrain/Resources/Gold/Gold Stones/Gold Stone 4_Highlight.png" id="1_1kxpt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs8l0"]
+atlas = ExtResource("1_1kxpt")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg3x8"]
+atlas = ExtResource("1_1kxpt")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0o44"]
+atlas = ExtResource("1_1kxpt")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym18r"]
+atlas = ExtResource("1_1kxpt")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4u0m"]
+atlas = ExtResource("1_1kxpt")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0aj0v"]
+atlas = ExtResource("1_1kxpt")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8nrp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs8l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg3x8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0o44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym18r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4u0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0aj0v")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="GoldVein4" type="AnimatedSprite2D" unique_id=1563693403]
+sprite_frames = SubResource("SpriteFrames_t8nrp")
+frame = 5
+frame_progress = 1.0
