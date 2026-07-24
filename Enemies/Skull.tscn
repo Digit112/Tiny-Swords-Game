@@ -167,7 +167,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y16xb")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"guard",
 "speed": 10.0
 }, {
@@ -226,4 +226,4 @@ animations = [{
 
 [node name="Skull" type="AnimatedSprite2D" unique_id=1583493476]
 sprite_frames = SubResource("SpriteFrames_iossi")
-animation = &"attack"
+animation = &"guard"

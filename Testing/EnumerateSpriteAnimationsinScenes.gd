@@ -73,8 +73,16 @@ func _ready() -> void:
 				var instance : Node = scenes[block_i].instantiate()
 				var animation_node : AnimatedSprite2D = instance.get_node(animated_sprite_name)
 				instance.global_position = cursor
+				animation_node.centered = false
 				animation_node.play(animation_name)
-				
+				animation_node.animation_finished.connect(
+					func _on_animation_finished() -> void:
+						var tween : Tween = get_tree().create_tween()
+						tween.tween_interval(0.5)
+						tween.tween_callback(
+							animation_node.play.bind(animation_name)
+						)
+				)
 				add_child(instance)
 				
 				dimensions = animation_node.sprite_frames.get_frame_texture(animation_name, 0).get_size()

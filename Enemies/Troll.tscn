@@ -558,11 +558,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tprrp")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"windup",
 "speed": 10.0
 }]
 
 [node name="Troll" type="AnimatedSprite2D" unique_id=1036556539]
 sprite_frames = SubResource("SpriteFrames_mb73q")
-animation = &"attack"
+animation = &"windup"
+frame = 4
+frame_progress = 1.0

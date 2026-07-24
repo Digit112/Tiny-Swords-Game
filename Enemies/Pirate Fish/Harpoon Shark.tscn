@@ -190,6 +190,5 @@ animations = [{
 }]
 
 [node name="HarpoonShark" type="AnimatedSprite2D" unique_id=1147563472]
-visible = false
 sprite_frames = SubResource("SpriteFrames_5tn3f")
 animation = &"throw"

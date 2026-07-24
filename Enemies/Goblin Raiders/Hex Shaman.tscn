@@ -371,7 +371,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hvuk7")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"projectile",
 "speed": 10.0
 }, {
@@ -433,6 +433,5 @@ animations = [{
 
 [node name="HexShaman" type="AnimatedSprite2D" unique_id=933367369]
 sprite_frames = SubResource("SpriteFrames_n4m6o")
-animation = &"transformation_spell"
-frame = 10
-frame_progress = 1.0
+animation = &"projectile"
+frame_progress = 0.0465882

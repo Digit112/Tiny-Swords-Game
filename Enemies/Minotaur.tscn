@@ -270,7 +270,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w68nu")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"guard",
 "speed": 10.0
 }, {
@@ -359,4 +359,4 @@ animations = [{
 
 [node name="Minotaur" type="AnimatedSprite2D" unique_id=1829364384]
 sprite_frames = SubResource("SpriteFrames_riiul")
-animation = &"walk"
+animation = &"guard"

@@ -224,7 +224,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k0nol")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"guard",
 "speed": 10.0
 }, {
@@ -289,4 +289,4 @@ animations = [{
 
 [node name="Panda" type="AnimatedSprite2D" unique_id=210901824]
 sprite_frames = SubResource("SpriteFrames_wjp0f")
-animation = &"run"
+animation = &"guard"

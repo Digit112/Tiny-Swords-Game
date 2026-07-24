@@ -104,9 +104,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3t07t")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -135,7 +135,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -152,9 +152,11 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="PigRiderSpearGoblin" type="AnimatedSprite2D" unique_id=442825179]
 sprite_frames = SubResource("SpriteFrames_blhmc")
-animation = &"run"
+animation = &"attack"
+frame = 6
+frame_progress = 1.0
