@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cvlsc1rj5ygi5"]
+
+[ext_resource type="Texture2D" uid="uid://cq4jnmi8wdqdp" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Cannon/Cannon_Ball.png" id="1_8ybg2"]
+[ext_resource type="Texture2D" uid="uid://cma3pw2oaoklg" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Cannon/Cannon_Down.png" id="2_a2p3r"]
+[ext_resource type="Texture2D" uid="uid://da1l0jadct6ct" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Cannon/Cannon_DownRight.png" id="3_1hryf"]
+[ext_resource type="Texture2D" uid="uid://sssl8fchdvuh" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Cannon/Cannon_Right.png" id="4_lbync"]
+[ext_resource type="Texture2D" uid="uid://daq8so6sq7ye1" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Cannon/Cannon_Up.png" id="5_j2w7p"]
+[ext_resource type="Texture2D" uid="uid://cfrj6mg3vbusk" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Cannon/Cannon_UpRight.png" id="6_p3tlm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qav21"]
+atlas = ExtResource("1_8ybg2")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpkii"]
+atlas = ExtResource("2_a2p3r")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhd3r"]
+atlas = ExtResource("3_1hryf")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oahjo"]
+atlas = ExtResource("4_lbync")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mif0"]
+atlas = ExtResource("5_j2w7p")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k70b5"]
+atlas = ExtResource("6_p3tlm")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ksxkn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qav21")
+}],
+"loop": 1,
+"name": &"ball",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpkii")
+}],
+"loop": 1,
+"name": &"down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhd3r")
+}],
+"loop": 1,
+"name": &"down_right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oahjo")
+}],
+"loop": 1,
+"name": &"right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mif0")
+}],
+"loop": 1,
+"name": &"up",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k70b5")
+}],
+"loop": 1,
+"name": &"up_right",
+"speed": 10.0
+}]
+
+[node name="Cannon" type="AnimatedSprite2D" unique_id=1311228705]
+sprite_frames = SubResource("SpriteFrames_ksxkn")
+animation = &"up_right"

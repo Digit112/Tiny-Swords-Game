@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://deuoy7wk05e5y"]
+
+[ext_resource type="Texture2D" uid="uid://cmkww35weqs6a" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Goblin Raiders/Goblin Hut/Goblin Hut.png" id="1_hpxat"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11t7y"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(0, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c7at"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(192, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1xm1"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(384, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqwss"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(576, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c2k2"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(768, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbmpe"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(960, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3vdx"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(1152, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvo1l"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(1344, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc1qk"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(1536, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idcwm"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(1728, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8d5yl"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(1920, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhr26"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(2112, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7r8wc"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(2304, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4pp6"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(2496, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sjcw"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(2688, 0, 192, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5tg0"]
+atlas = ExtResource("1_hpxat")
+region = Rect2(2880, 0, 192, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8xcwh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11t7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0c7at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1xm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqwss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c2k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbmpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3vdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvo1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc1qk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idcwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8d5yl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhr26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7r8wc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4pp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sjcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5tg0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="GoblinHut" type="AnimatedSprite2D" unique_id=735777946]
+sprite_frames = SubResource("SpriteFrames_8xcwh")
+frame_progress = 0.54252255

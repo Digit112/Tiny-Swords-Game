@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bt7yed2eo3lm3"]
+
+[ext_resource type="Texture2D" uid="uid://bcj36liw6juqw" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Root Troll/Bones_01.png" id="1_cadx8"]
+[ext_resource type="Texture2D" uid="uid://dpd1q5a1pxpdb" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Root Troll/Bones_02.png" id="2_j74wp"]
+[ext_resource type="Texture2D" uid="uid://lutk3omlp1tm" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Root Troll/Bones_03.png" id="3_scaku"]
+[ext_resource type="Texture2D" uid="uid://dblfa17n1wo4d" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Root Troll/Dead Tree.png" id="4_q5l7v"]
+[ext_resource type="Texture2D" uid="uid://doblrdw8rgvqs" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Root Troll/Skull Spike_01.png" id="5_8mnmf"]
+[ext_resource type="Texture2D" uid="uid://itaq0clgjomb" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Root Troll/Skull Spike_02.png" id="6_q6y2d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bv6v"]
+atlas = ExtResource("1_cadx8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnd1m"]
+atlas = ExtResource("2_j74wp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osddl"]
+atlas = ExtResource("3_scaku")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxcus"]
+atlas = ExtResource("4_q5l7v")
+region = Rect2(0, 0, 384, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hejgj"]
+atlas = ExtResource("5_8mnmf")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmsij"]
+atlas = ExtResource("6_q6y2d")
+region = Rect2(0, 0, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hq3av"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bv6v")
+}],
+"loop": 1,
+"name": &"bones1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnd1m")
+}],
+"loop": 1,
+"name": &"bones2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osddl")
+}],
+"loop": 1,
+"name": &"bones3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxcus")
+}],
+"loop": 1,
+"name": &"dead_tree",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hejgj")
+}],
+"loop": 1,
+"name": &"skull_spike1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmsij")
+}],
+"loop": 1,
+"name": &"skull_spike2",
+"speed": 5.0
+}]
+
+[node name="RootTroll" type="AnimatedSprite2D" unique_id=1027096922]
+sprite_frames = SubResource("SpriteFrames_hq3av")
+animation = &"skull_spike2"

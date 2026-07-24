@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://24mgkv4h4mpt"]
+
+[ext_resource type="Texture2D" uid="uid://b1micipd3nfje" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Fish Hut/Fish Hut.png" id="1_5ajh1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnpfw"]
+atlas = ExtResource("1_5ajh1")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khpyw"]
+atlas = ExtResource("1_5ajh1")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bmub"]
+atlas = ExtResource("1_5ajh1")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iebxb"]
+atlas = ExtResource("1_5ajh1")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myuyt"]
+atlas = ExtResource("1_5ajh1")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eic3"]
+atlas = ExtResource("1_5ajh1")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5qp6"]
+atlas = ExtResource("1_5ajh1")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5be85"]
+atlas = ExtResource("1_5ajh1")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kp7kd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnpfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khpyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bmub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iebxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myuyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2eic3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5qp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5be85")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="FishHut" type="AnimatedSprite2D" unique_id=1253560881]
+sprite_frames = SubResource("SpriteFrames_kp7kd")

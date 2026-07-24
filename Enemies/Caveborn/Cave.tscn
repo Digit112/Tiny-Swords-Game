@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://du26nr44xxbom"]
+
+[ext_resource type="Texture2D" uid="uid://43srgrm7evkr" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Caveborn/Cave/Cave_Idle.png" id="1_2rbgy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iji0"]
+atlas = ExtResource("1_2rbgy")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb5cj"]
+atlas = ExtResource("1_2rbgy")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ielbi"]
+atlas = ExtResource("1_2rbgy")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_repfg"]
+atlas = ExtResource("1_2rbgy")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kcoj"]
+atlas = ExtResource("1_2rbgy")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il0ny"]
+atlas = ExtResource("1_2rbgy")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1aug"]
+atlas = ExtResource("1_2rbgy")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t5r4"]
+atlas = ExtResource("1_2rbgy")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_07u3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iji0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb5cj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ielbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_repfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kcoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il0ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1aug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t5r4")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Cave" type="AnimatedSprite2D" unique_id=1725308863]
+sprite_frames = SubResource("SpriteFrames_07u3d")
+animation = &"idle"
+frame_progress = 0.1466523

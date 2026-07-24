@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://di7m4khaj50h"]
+
+[ext_resource type="Texture2D" uid="uid://b7ycmon8siqwy" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Goblin Raiders/Pig/Pig_Idle.png" id="1_bv1df"]
+[ext_resource type="Texture2D" uid="uid://dvtn8irsf5p46" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Goblin Raiders/Pig/Pig_Run.png" id="2_wf4cj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xisav"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlr6d"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srmhl"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuq2e"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xn63k"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd24o"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnpvr"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmfuu"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwpk7"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(1536, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yot06"]
+atlas = ExtResource("1_bv1df")
+region = Rect2(1728, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pvti"]
+atlas = ExtResource("2_wf4cj")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf3l4"]
+atlas = ExtResource("2_wf4cj")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ihdu"]
+atlas = ExtResource("2_wf4cj")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v84t6"]
+atlas = ExtResource("2_wf4cj")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o1jy7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xisav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlr6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srmhl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuq2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xn63k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wd24o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnpvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmfuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwpk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yot06")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pvti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf3l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ihdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v84t6")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="Pig" type="AnimatedSprite2D" unique_id=1790988426]
+sprite_frames = SubResource("SpriteFrames_o1jy7")
+animation = &"run"

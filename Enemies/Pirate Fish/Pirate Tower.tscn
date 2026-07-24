@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://ble0d3mtvjbtx"]
+
+[ext_resource type="Texture2D" uid="uid://npxrmadhts4g" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Pirate Tower/Pirate Tower_Ground.png" id="1_05vwd"]
+[ext_resource type="Texture2D" uid="uid://del8s4gmk64wk" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Pirate Tower/Pirate Tower_Water.png" id="2_hgfsc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfy11"]
+atlas = ExtResource("1_05vwd")
+region = Rect2(0, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el4eq"]
+atlas = ExtResource("2_hgfsc")
+region = Rect2(0, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4pck"]
+atlas = ExtResource("2_hgfsc")
+region = Rect2(128, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a267w"]
+atlas = ExtResource("2_hgfsc")
+region = Rect2(256, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpmbp"]
+atlas = ExtResource("2_hgfsc")
+region = Rect2(384, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqpkp"]
+atlas = ExtResource("2_hgfsc")
+region = Rect2(512, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jr8c"]
+atlas = ExtResource("2_hgfsc")
+region = Rect2(640, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjmoh"]
+atlas = ExtResource("2_hgfsc")
+region = Rect2(768, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axnbh"]
+atlas = ExtResource("2_hgfsc")
+region = Rect2(896, 0, 128, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwlrn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfy11")
+}],
+"loop": 1,
+"name": &"ground",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el4eq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4pck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a267w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpmbp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqpkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jr8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjmoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axnbh")
+}],
+"loop": 1,
+"name": &"water",
+"speed": 10.0
+}]
+
+[node name="PirateTower" type="AnimatedSprite2D" unique_id=1811687492]
+sprite_frames = SubResource("SpriteFrames_cwlrn")
+animation = &"water"

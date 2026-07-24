@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://cais3lgw1apnt"]
+
+[ext_resource type="Texture2D" uid="uid://baaw3ypb5w5wc" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Harpoon Shark/Harpoon.png" id="1_xivdx"]
+[ext_resource type="Texture2D" uid="uid://buc2m2f7i3rkj" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Harpoon Shark/Harpoon Shark_Idle.png" id="2_rvxvb"]
+[ext_resource type="Texture2D" uid="uid://brwdbu6qnua8a" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Harpoon Shark/Harpoon Shark_Run.png" id="3_ljgsg"]
+[ext_resource type="Texture2D" uid="uid://brwq0opsugky" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Harpoon Shark/Harpoon Shark_Throw.png" id="4_o25tb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o5lf"]
+atlas = ExtResource("1_xivdx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvb2u"]
+atlas = ExtResource("2_rvxvb")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gxcm"]
+atlas = ExtResource("2_rvxvb")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irw0k"]
+atlas = ExtResource("2_rvxvb")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0slpe"]
+atlas = ExtResource("2_rvxvb")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgjux"]
+atlas = ExtResource("2_rvxvb")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i6vq"]
+atlas = ExtResource("2_rvxvb")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_keckr"]
+atlas = ExtResource("2_rvxvb")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q871v"]
+atlas = ExtResource("2_rvxvb")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mbxn"]
+atlas = ExtResource("3_ljgsg")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fid7d"]
+atlas = ExtResource("3_ljgsg")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p36y2"]
+atlas = ExtResource("3_ljgsg")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvmdf"]
+atlas = ExtResource("3_ljgsg")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqnbt"]
+atlas = ExtResource("3_ljgsg")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqowc"]
+atlas = ExtResource("3_ljgsg")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk2sp"]
+atlas = ExtResource("4_o25tb")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s56jh"]
+atlas = ExtResource("4_o25tb")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kux0t"]
+atlas = ExtResource("4_o25tb")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_545r4"]
+atlas = ExtResource("4_o25tb")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xli2"]
+atlas = ExtResource("4_o25tb")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgmni"]
+atlas = ExtResource("4_o25tb")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgum1"]
+atlas = ExtResource("4_o25tb")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs1dq"]
+atlas = ExtResource("4_o25tb")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tn3f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1o5lf")
+}],
+"loop": 0,
+"name": &"harpoon",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvb2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gxcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irw0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0slpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgjux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2i6vq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_keckr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q871v")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mbxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fid7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p36y2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvmdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqnbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqowc")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dk2sp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s56jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kux0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_545r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xli2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgmni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgum1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs1dq")
+}],
+"loop": 0,
+"name": &"throw",
+"speed": 10.0
+}]
+
+[node name="HarpoonShark" type="AnimatedSprite2D" unique_id=1147563472]
+visible = false
+sprite_frames = SubResource("SpriteFrames_5tn3f")
+animation = &"throw"
