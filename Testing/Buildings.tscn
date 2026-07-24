@@ -71,34 +71,34 @@ texture = ExtResource("9_udgim")
 
 [node name="Bush1" parent="." unique_id=1602402288 instance=ExtResource("10_udgim")]
 position = Vector2(763, 111)
-frame_progress = 0.14822948
+frame_progress = 0.62544966
 
 [node name="Bush3" parent="." unique_id=753430760 instance=ExtResource("11_wuuhw")]
 position = Vector2(884, 473)
-frame_progress = 0.24697426
+frame_progress = 0.72419477
 
 [node name="Rock1" parent="." unique_id=1662638564 instance=ExtResource("12_v6ppw")]
-position = Vector2(239, 538)
+position = Vector2(239, 546)
 
 [node name="Rock2" parent="." unique_id=1456692933 instance=ExtResource("13_ku351")]
 position = Vector2(457, 582)
 
 [node name="WaterRock1" parent="." unique_id=373621884 instance=ExtResource("14_chpur")]
 position = Vector2(73, 612)
-frame_progress = 0.5037475
+frame_progress = 0.98096794
 
 [node name="WaterRock4" parent="." unique_id=1771129648 instance=ExtResource("15_4tdwo")]
 position = Vector2(133, 75)
-frame_progress = 0.2112458
+frame_progress = 0.6884662
 
 [node name="RubberDuck" parent="." unique_id=101157007 instance=ExtResource("16_wcaaw")]
 position = Vector2(42, 82)
-frame_progress = 0.74423945
+frame_progress = 0.22146004
 
 [node name="Bush4" parent="." unique_id=1411334551 instance=ExtResource("17_8bxy2")]
 position = Vector2(292, 139)
-frame_progress = 0.17932346
+frame_progress = 0.65654385
 
 [node name="Bush5" parent="." unique_id=2027599547 instance=ExtResource("17_8bxy2")]
 position = Vector2(295, 199)
-frame_progress = 0.82461476
+frame_progress = 0.30183497
