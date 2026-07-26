@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dfmxqv7efrftl"]
+
+[ext_resource type="Script" uid="uid://cplvek83a3dj1" path="res://Scripts/CloudGenerator.gd" id="1_ka3ex"]
+[ext_resource type="PackedScene" uid="uid://cj5wy8icd1k4j" path="res://Clouds/Cloud1.tscn" id="2_6k7rx"]
+[ext_resource type="Script" uid="uid://caahelsjf4cr0" path="res://Testing/Unpauser.gd" id="3_3vd7x"]
+[ext_resource type="PackedScene" uid="uid://0o3sr2l28ujs" path="res://Clouds/Cloud2.tscn" id="3_6gpng"]
+[ext_resource type="Script" uid="uid://27rqsa2408ws" path="res://Testing/camera_2d.gd" id="3_f2k0y"]
+[ext_resource type="PackedScene" uid="uid://bq0f38gctlslk" path="res://Clouds/Cloud3.tscn" id="4_r4e4s"]
+[ext_resource type="PackedScene" uid="uid://bhx00bwt7jpta" path="res://Clouds/Cloud4.tscn" id="5_167di"]
+[ext_resource type="PackedScene" uid="uid://jghok22ucvdj" path="res://Clouds/Cloud5.tscn" id="6_0cq3s"]
+[ext_resource type="PackedScene" uid="uid://bqpcgbpm23y0e" path="res://Clouds/Cloud6.tscn" id="7_fd2wo"]
+[ext_resource type="PackedScene" uid="uid://dp7e4crknr8g6" path="res://Clouds/Cloud7.tscn" id="8_8bc15"]
+[ext_resource type="PackedScene" uid="uid://r2vdu4l76rsc" path="res://Clouds/Cloud8.tscn" id="9_emfqi"]
+
+[node name="CloudGeneratorTest" type="Node2D" unique_id=1292671789]
+y_sort_enabled = true
+script = ExtResource("1_ka3ex")
+clouds = Array[PackedScene]([ExtResource("2_6k7rx"), ExtResource("3_6gpng"), ExtResource("4_r4e4s"), ExtResource("5_167di"), ExtResource("6_0cq3s"), ExtResource("7_fd2wo"), ExtResource("8_8bc15"), ExtResource("9_emfqi")])
+density = 0.6
+do_use_active_camera_rect = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=75214814]
+zoom = Vector2(0.18, 0.18)
+script = ExtResource("3_f2k0y")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=779833587]
+process_mode = 3
+script = ExtResource("3_3vd7x")

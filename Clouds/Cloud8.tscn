@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://r2vdu4l76rsc"]
 
-[ext_resource type="Texture2D" uid="uid://bi6v2uby7r35g" path="res://Assets/Tiny Swords/Terrain/Decorations/Clouds/Clouds_08.png" id="1_3mny2"]
+[ext_resource type="Texture2D" uid="uid://pw4qh4fmohqt" path="res://Assets/Tiny Swords/Terrain/Decorations/Clouds/Clouds_08 Cropped.png" id="1_3mny2"]
 
 [node name="Cloud8" type="Sprite2D" unique_id=239224094]
 texture = ExtResource("1_3mny2")

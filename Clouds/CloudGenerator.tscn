@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brvg6fojvc8hv"]
 
-[ext_resource type="Script" uid="uid://cplvek83a3dj1" path="res://Scripts/CloudGeneratorManager.gd" id="1_whmxg"]
+[ext_resource type="Script" uid="uid://cplvek83a3dj1" path="res://Scripts/CloudGenerator.gd" id="1_whmxg"]
 
 [node name="CloudGenerator" type="Node2D" unique_id=149536328]
 script = ExtResource("1_whmxg")
