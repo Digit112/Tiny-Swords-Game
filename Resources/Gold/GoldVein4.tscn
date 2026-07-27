@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://x1c1gdmqwimu"]
 
 [ext_resource type="Texture2D" uid="uid://bu38id5t532a1" path="res://Assets/Tiny Swords/Terrain/Resources/Gold/Gold Stones/Gold Stone 4_Highlight.png" id="1_1kxpt"]
+[ext_resource type="Script" uid="uid://bhvy4b0tlv6f7" path="res://Scripts/GoldNode.gd" id="2_cs8l0"]
+[ext_resource type="PackedScene" uid="uid://c08clx0nt8siv" path="res://Pickups/GoldPickup.tscn" id="3_kg3x8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cs8l0"]
 atlas = ExtResource("1_1kxpt")
@@ -52,7 +54,34 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gyx6j"]
+radius = 16.0
+height = 46.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2gh1u"]
+radius = 25.0
+
 [node name="GoldVein4" type="AnimatedSprite2D" unique_id=1563693403]
 sprite_frames = SubResource("SpriteFrames_t8nrp")
 frame = 5
 frame_progress = 1.0
+script = ExtResource("2_cs8l0")
+harvesting_tool = 3
+dropped_item = ExtResource("3_kg3x8")
+min_drops = 2
+max_drops = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=538748876]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1459159648]
+position = Vector2(2, -1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_gyx6j")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=4584678]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1876961442]
+position = Vector2(1, -7)
+shape = SubResource("CircleShape2D_2gh1u")

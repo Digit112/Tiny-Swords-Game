@@ -1,0 +1,11 @@
+- Make Big Resource Nodes become small nodes when destroyed
+- Add effects (particles, shake) to hit resources.
+- Pickups bob effect w/ random start timer.
+- Add Trees, Sheep
+
+- Fix animated projectiles, give them their own scene.
+
+- Inventory
+	- Make Pickups go to inventory
+
+- Make Pickups stack.

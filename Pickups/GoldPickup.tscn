@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c08clx0nt8siv"]
+
+[ext_resource type="Texture2D" uid="uid://c53yuh3s0nbno" path="res://Assets/Tiny Swords/Terrain/Resources/Gold/Gold Resource/Gold_Resource_Highlight.png" id="1_lpqvb"]
+[ext_resource type="Script" uid="uid://ci4twlk68uhkm" path="res://Scripts/AnimatedPickup.gd" id="2_lpqvb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u77w5"]
+atlas = ExtResource("1_lpqvb")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwkid"]
+atlas = ExtResource("1_lpqvb")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gj50e"]
+atlas = ExtResource("1_lpqvb")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umiln"]
+atlas = ExtResource("1_lpqvb")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw457"]
+atlas = ExtResource("1_lpqvb")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8egph"]
+atlas = ExtResource("1_lpqvb")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_65igi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u77w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwkid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gj50e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umiln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw457")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8egph")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v5ivm"]
+radius = 12.0
+
+[node name="GoldPickup" type="AnimatedSprite2D" unique_id=628346135]
+sprite_frames = SubResource("SpriteFrames_65igi")
+script = ExtResource("2_lpqvb")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1114518919]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=723675928]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_v5ivm")

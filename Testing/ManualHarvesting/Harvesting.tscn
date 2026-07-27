@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ctb1st08if861"]
+
+[ext_resource type="PackedScene" uid="uid://e6hijcf460k5" path="res://Testing/Harvesting/PosessedPawn.tscn" id="1_sa66v"]
+[ext_resource type="PackedScene" uid="uid://dow5ytdgy1bkx" path="res://Testing/ManualHarvesting/HarvestableGold.tscn" id="2_0ujqg"]
+
+[node name="Harvesting" type="Node2D" unique_id=1791179742]
+
+[node name="Pawn" parent="." unique_id=1711342334 instance=ExtResource("1_sa66v")]
+position = Vector2(132, 141)
+
+[node name="HarvestableGold" parent="." unique_id=1213514711 instance=ExtResource("2_0ujqg")]
+position = Vector2(458, 197)

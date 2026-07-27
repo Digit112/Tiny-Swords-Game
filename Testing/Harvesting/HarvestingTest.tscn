@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ba2yvmrkqro1o"]
+
+[ext_resource type="PackedScene" uid="uid://e6hijcf460k5" path="res://Testing/Harvesting/PosessedPawn.tscn" id="1_xmsa8"]
+[ext_resource type="PackedScene" uid="uid://bd7hfdd8oktpv" path="res://Resources/Gold/GoldVein1.tscn" id="2_botra"]
+[ext_resource type="PackedScene" uid="uid://c6kpnws4shm01" path="res://Resources/Gold/GoldVein2.tscn" id="3_illnw"]
+[ext_resource type="PackedScene" uid="uid://8u3uvgex07us" path="res://Resources/Gold/GoldVein3.tscn" id="4_f8w3f"]
+[ext_resource type="PackedScene" uid="uid://x1c1gdmqwimu" path="res://Resources/Gold/GoldVein4.tscn" id="5_3mq0u"]
+[ext_resource type="PackedScene" uid="uid://d2s7qn4rhucpr" path="res://Resources/Gold/GoldVein5.tscn" id="6_5crp6"]
+[ext_resource type="PackedScene" uid="uid://cepdnyjlu0esg" path="res://Resources/Gold/GoldVein6.tscn" id="7_eici2"]
+
+[node name="HarvestingTest" type="Node2D" unique_id=1348847997]
+y_sort_enabled = true
+
+[node name="Pawn" parent="." unique_id=1711342334 instance=ExtResource("1_xmsa8")]
+position = Vector2(178, 358)
+motion_mode = 0
+
+[node name="GoldVein1" parent="." unique_id=485395264 instance=ExtResource("2_botra")]
+position = Vector2(851, 337)
+
+[node name="GoldVein2" parent="." unique_id=605381291 instance=ExtResource("3_illnw")]
+position = Vector2(781, 338)
+
+[node name="GoldVein3" parent="." unique_id=54682366 instance=ExtResource("4_f8w3f")]
+position = Vector2(704, 339)
+
+[node name="GoldVein4" parent="." unique_id=1563693403 instance=ExtResource("5_3mq0u")]
+position = Vector2(603, 339)
+
+[node name="GoldVein5" parent="." unique_id=1320369976 instance=ExtResource("6_5crp6")]
+position = Vector2(485, 336)
+
+[node name="GoldVein6" parent="." unique_id=551858782 instance=ExtResource("7_eici2")]
+position = Vector2(349, 336)

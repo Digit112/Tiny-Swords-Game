@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dow5ytdgy1bkx"]
+
+[ext_resource type="PackedScene" uid="uid://cepdnyjlu0esg" path="res://Resources/Gold/GoldVein6.tscn" id="1_cuy1e"]
+[ext_resource type="Script" uid="uid://b18ae3e4sr861" path="res://Testing/ManualHarvesting/GoldVein.gd" id="1_f7ns1"]
+[ext_resource type="PackedScene" uid="uid://c08clx0nt8siv" path="res://Pickups/GoldPickup.tscn" id="2_0n3ln"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_65igi"]
+radius = 21.0
+height = 68.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5ivm"]
+size = Vector2(61, 61)
+
+[node name="HarvestableGold" type="Node2D" unique_id=1213514711]
+script = ExtResource("1_f7ns1")
+gold_item = ExtResource("2_0n3ln")
+
+[node name="GoldVein6" parent="." unique_id=551858782 instance=ExtResource("1_cuy1e")]
+
+[node name="Enviornment" type="StaticBody2D" parent="." unique_id=549435517]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviornment" unique_id=1032099651]
+position = Vector2(-1, 2)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_65igi")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=346541731]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=788137621]
+position = Vector2(-0.5, -10.5)
+shape = SubResource("RectangleShape2D_v5ivm")
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

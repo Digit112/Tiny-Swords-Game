@@ -3158,7 +3158,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3rtcj")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"black_use_axe",
 "speed": 10.0
 }, {
@@ -3172,7 +3172,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_815cv")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"black_use_hammer",
 "speed": 10.0
 }, {
@@ -3189,7 +3189,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8tjfj")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"black_use_knife",
 "speed": 10.0
 }, {
@@ -3212,7 +3212,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3kpo2")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"black_use_pickaxe",
 "speed": 10.0
 }, {
@@ -3651,7 +3651,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jkgir")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"blue_use_axe",
 "speed": 10.0
 }, {
@@ -3665,7 +3665,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sxd7e")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"blue_use_hammer",
 "speed": 10.0
 }, {
@@ -3682,7 +3682,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ypjsi")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"blue_use_knife",
 "speed": 10.0
 }, {
@@ -3705,7 +3705,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qwok0")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"blue_use_pickaxe",
 "speed": 10.0
 }, {
@@ -4144,7 +4144,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mho8d")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"purple_use_axe",
 "speed": 10.0
 }, {
@@ -4158,7 +4158,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kd2x5")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"purple_use_hammer",
 "speed": 10.0
 }, {
@@ -4175,7 +4175,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_obqyd")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"purple_use_knife",
 "speed": 10.0
 }, {
@@ -4198,7 +4198,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a3yhd")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"purple_use_pickaxe",
 "speed": 10.0
 }, {
@@ -4637,7 +4637,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dppio")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"red_use_axe",
 "speed": 10.0
 }, {
@@ -4651,7 +4651,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rctsl")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"red_use_hammer",
 "speed": 10.0
 }, {
@@ -4668,7 +4668,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jgjq4")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"red_use_knife",
 "speed": 10.0
 }, {
@@ -4691,7 +4691,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c1s2a")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"red_use_pickaxe",
 "speed": 10.0
 }, {
@@ -5130,7 +5130,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n1r3v")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"yellow_use_axe",
 "speed": 10.0
 }, {
@@ -5144,7 +5144,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_orv1n")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"yellow_use_hammer",
 "speed": 10.0
 }, {
@@ -5161,7 +5161,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e8uhm")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"yellow_use_knife",
 "speed": 10.0
 }, {
@@ -5184,7 +5184,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dos6t")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"yellow_use_pickaxe",
 "speed": 10.0
 }]
