@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dlhcarg5cnfwi"]
+
+[ext_resource type="Texture2D" uid="uid://baaw3ypb5w5wc" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Pirate Fish/Harpoon Shark/Harpoon.png" id="1_n13wb"]
+
+[node name="HarpoonSharkHarpoon" type="Sprite2D" unique_id=1852062148]
+texture = ExtResource("1_n13wb")

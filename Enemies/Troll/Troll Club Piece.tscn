@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://bdsb0j7wrpda5"]
+
+[ext_resource type="Texture2D" uid="uid://rm4kmi4kv5fj" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Troll/Troll_ClubPart1.png" id="1_105lg"]
+[ext_resource type="Texture2D" uid="uid://pmgorhuhdb1o" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Troll/Troll_ClubPart2.png" id="2_6qh7b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moyrt"]
+atlas = ExtResource("1_105lg")
+region = Rect2(0, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jing"]
+atlas = ExtResource("1_105lg")
+region = Rect2(384, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5iiq3"]
+atlas = ExtResource("1_105lg")
+region = Rect2(768, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3ug8"]
+atlas = ExtResource("1_105lg")
+region = Rect2(1152, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21mor"]
+atlas = ExtResource("1_105lg")
+region = Rect2(1536, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlrxl"]
+atlas = ExtResource("1_105lg")
+region = Rect2(1920, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcq50"]
+atlas = ExtResource("1_105lg")
+region = Rect2(2304, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0o7p"]
+atlas = ExtResource("1_105lg")
+region = Rect2(2688, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuj56"]
+atlas = ExtResource("1_105lg")
+region = Rect2(3072, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ch4wq"]
+atlas = ExtResource("1_105lg")
+region = Rect2(3456, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1r0m"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(0, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv5aq"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(384, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf2ai"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(768, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67pum"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(1152, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_743ei"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(1536, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klnxn"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(1920, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wh4e4"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(2304, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xogr5"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(2688, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukdv8"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(3072, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gguui"]
+atlas = ExtResource("2_6qh7b")
+region = Rect2(3456, 0, 384, 384)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_76vjy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moyrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jing")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5iiq3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3ug8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21mor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlrxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcq50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0o7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuj56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ch4wq")
+}],
+"loop": 0,
+"name": &"part_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1r0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv5aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf2ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67pum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_743ei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klnxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wh4e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xogr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukdv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gguui")
+}],
+"loop": 0,
+"name": &"part_2",
+"speed": 10.0
+}]
+
+[node name="TrollClubPiece" type="AnimatedSprite2D" unique_id=1138997728]
+sprite_frames = SubResource("SpriteFrames_76vjy")
+animation = &"part_2"
+frame = 9
+frame_progress = 1.0

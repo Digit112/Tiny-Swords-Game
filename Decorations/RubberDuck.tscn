@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5nshs4ubcvtu"]
 
 [ext_resource type="Texture2D" uid="uid://cy1xj2rqu5c4q" path="res://Assets/Tiny Swords/Terrain/Decorations/Rubber Duck/Rubber duck.png" id="1_qeqq7"]
-[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/PlayDefaultTool.gd" id="2_a4baf"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/Trivial/PlayDefaultTool.gd" id="2_a4baf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4baf"]
 atlas = ExtResource("1_qeqq7")

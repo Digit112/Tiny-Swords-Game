@@ -13,7 +13,7 @@ class_name CloudGenerator extends Node2D
 ## combining the cell index with the seed.
 ##
 ## Calling negotiate_cell_size() completely shifts the grid and discards all state.
-## As a result, it would be very visually jarring.
+## It would be very visually jarring to see.
 
 ## Scenes to generate as clouds.
 ## Runtime changes will only apply to freshly generated cells and cause the effective cloud coverage to change.

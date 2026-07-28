@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bb4ukvr2vd2ys"]
+
+[ext_resource type="Texture2D" uid="uid://crth0pxqupibv" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Goblin Raiders/Hex Shaman/Hex Shaman_Projectile.png" id="1_ucub0"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/Trivial/PlayDefaultTool.gd" id="2_02rqu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2l81"]
+atlas = ExtResource("1_ucub0")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h852"]
+atlas = ExtResource("1_ucub0")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xo8u"]
+atlas = ExtResource("1_ucub0")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w55f3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2l81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h852")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xo8u")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="HexShamanProjectile" type="AnimatedSprite2D" unique_id=182749015]
+sprite_frames = SubResource("SpriteFrames_w55f3")
+script = ExtResource("2_02rqu")

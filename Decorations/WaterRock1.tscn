@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ocm54eulukrd"]
 
 [ext_resource type="Texture2D" uid="uid://dssqro45wxkh5" path="res://Assets/Tiny Swords/Terrain/Decorations/Rocks in the Water/Water Rocks_01.png" id="1_4oe2i"]
-[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/PlayDefaultTool.gd" id="2_ckbsh"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/Trivial/PlayDefaultTool.gd" id="2_ckbsh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ckbsh"]
 atlas = ExtResource("1_4oe2i")

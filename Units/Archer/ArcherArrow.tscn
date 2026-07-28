@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dexcemuiaieok"]
+
+[ext_resource type="Texture2D" uid="uid://bpgotfwxqpnjm" path="res://Assets/Tiny Swords/Units/Red Units/Archer/Arrow.png" id="1_qx4od"]
+
+[node name="ArcherArrow" type="Sprite2D" unique_id=1592064085]
+texture = ExtResource("1_qx4od")

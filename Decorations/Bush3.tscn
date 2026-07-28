@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3muw8k7siwba"]
 
 [ext_resource type="Texture2D" uid="uid://dxrqwvedwfmu7" path="res://Assets/Tiny Swords/Terrain/Decorations/Bushes/Bushe3.png" id="1_xuinr"]
-[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/PlayDefaultTool.gd" id="2_6pgrg"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/Trivial/PlayDefaultTool.gd" id="2_6pgrg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pgrg"]
 atlas = ExtResource("1_xuinr")

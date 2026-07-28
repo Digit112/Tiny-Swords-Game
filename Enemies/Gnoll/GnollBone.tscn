@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cfywpg03cwmyt"]
+
+[ext_resource type="Texture2D" uid="uid://n2qdouscquyg" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Gnoll/Gnoll_Bone.png" id="1_05ao0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0i50"]
+atlas = ExtResource("1_05ao0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tlw6"]
+atlas = ExtResource("1_05ao0")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_beuqv"]
+atlas = ExtResource("1_05ao0")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_golaa"]
+atlas = ExtResource("1_05ao0")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1xqi2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0i50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tlw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_beuqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_golaa")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="GnollBone" type="AnimatedSprite2D" unique_id=1675289948]
+sprite_frames = SubResource("SpriteFrames_1xqi2")
+frame_progress = 0.0002261069

@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dt56ryv261myw"]
+
+[ext_resource type="Texture2D" uid="uid://cpgnuh1xvlnk5" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Goblin Raiders/Hex Shaman/Hex Shaman_Explosion.png" id="1_3b6fl"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/Trivial/PlayDefaultTool.gd" id="2_3wo7h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wo7h"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihsds"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgosf"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrvmw"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_856v4"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xewt"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oskw4"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp8hb"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m7bm"]
+atlas = ExtResource("1_3b6fl")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ky1dk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wo7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihsds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgosf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrvmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_856v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xewt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oskw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp8hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m7bm")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="HexShamanExplosion" type="AnimatedSprite2D" unique_id=1259521792]
+sprite_frames = SubResource("SpriteFrames_ky1dk")
+script = ExtResource("2_3wo7h")

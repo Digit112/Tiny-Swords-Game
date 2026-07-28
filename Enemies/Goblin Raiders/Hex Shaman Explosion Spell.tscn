@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://dtn2khftqfrw8"]
+
+[ext_resource type="Texture2D" uid="uid://bolx8ixrkansi" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Goblin Raiders/Hex Shaman/Hex Shaman_Explosion Spell.png" id="1_2170m"]
+[ext_resource type="Script" uid="uid://bdalfkxf770y" path="res://Scripts/Trivial/PlayDefaultTool.gd" id="2_l00a5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l00a5"]
+atlas = ExtResource("1_2170m")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8n67"]
+atlas = ExtResource("1_2170m")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pr6p4"]
+atlas = ExtResource("1_2170m")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rdik"]
+atlas = ExtResource("1_2170m")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijy77"]
+atlas = ExtResource("1_2170m")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3mja"]
+atlas = ExtResource("1_2170m")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut3a0"]
+atlas = ExtResource("1_2170m")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8qco"]
+atlas = ExtResource("1_2170m")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4lnc"]
+atlas = ExtResource("1_2170m")
+region = Rect2(1536, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3vid"]
+atlas = ExtResource("1_2170m")
+region = Rect2(1728, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6som"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l00a5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8n67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pr6p4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rdik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijy77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3mja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut3a0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8qco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4lnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3vid")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="HexShamanExplosionSpell" type="AnimatedSprite2D" unique_id=384148356]
+sprite_frames = SubResource("SpriteFrames_l6som")
+script = ExtResource("2_l00a5")

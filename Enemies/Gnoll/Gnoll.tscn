@@ -1,26 +1,9 @@
 [gd_scene format=3 uid="uid://cvdrt53m1l1t8"]
 
-[ext_resource type="Texture2D" uid="uid://n2qdouscquyg" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Gnoll/Gnoll_Bone.png" id="1_4eoq7"]
 [ext_resource type="Texture2D" uid="uid://beecoejiwsrc7" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Gnoll/Gnoll_Hit.png" id="2_15roq"]
 [ext_resource type="Texture2D" uid="uid://bdxeo1jduqvlo" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Gnoll/Gnoll_Idle.png" id="3_qlq6n"]
 [ext_resource type="Texture2D" uid="uid://46nhp6hkdpct" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Gnoll/Gnoll_Throw.png" id="4_ewcri"]
 [ext_resource type="Texture2D" uid="uid://lqnub043qgt4" path="res://Assets/Tiny Swords/Enemy Pack/Enemies/Gnoll/Gnoll_Walk.png" id="5_dv37d"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r5f3a"]
-atlas = ExtResource("1_4eoq7")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rrfoa"]
-atlas = ExtResource("1_4eoq7")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8eaaa"]
-atlas = ExtResource("1_4eoq7")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eyggj"]
-atlas = ExtResource("1_4eoq7")
-region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m6ebx"]
 atlas = ExtResource("2_15roq")
@@ -122,23 +105,6 @@ region = Rect2(1344, 0, 192, 192)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r5f3a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rrfoa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8eaaa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eyggj")
-}],
-"loop": 1,
-"name": &"bone",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_m6ebx")
 }, {
 "duration": 1.0,
@@ -232,5 +198,4 @@ animations = [{
 
 [node name="Gnoll" type="AnimatedSprite2D" unique_id=226009100]
 sprite_frames = SubResource("SpriteFrames_4rklr")
-animation = &"bone"
-frame_progress = 0.8029161
+animation = &"hit"
