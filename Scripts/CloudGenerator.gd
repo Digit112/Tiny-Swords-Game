@@ -1,4 +1,5 @@
 #@tool
+@icon("res://Assets/Godot Icons/node2d/cloud.svg")
 class_name CloudGenerator extends Node2D
 
 ## Spawns and deletes clouds within the visible game area according to (basically) stateless random generation.
