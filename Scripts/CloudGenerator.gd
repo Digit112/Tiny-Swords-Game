@@ -3,48 +3,62 @@
 class_name CloudGenerator extends Node2D
 
 ## Spawns and deletes clouds within the visible game area according to (basically) stateless random generation.
-## This means that we can display homogenous random cloud generation anywhere within artifacting due to rapid or unpredictable camera movement.
-## The node does manage state for performance reasons, which can be discarded by calling negotiate_cell_size().
+## This means that we can display homogenous random cloud generation anywhere,
+## without any artifacting due to rapid or unpredictable camera movement.
+## The node does manage state for performance reasons, which can be discarded by calling regenerate().
 ##
-## Under the hood, there is a (logical) infinite grid of rectangular cells, each with one or more clouds.
-## When you call negotiate_cell_size, it calculates the cell shape and size that is
-## statistically ideal for achieving the preferred cloud coverage and homogenous spacing.
-## Cells which are on-screen have their cloud locations statelessly determined by
-## combining the cell index with the seed.
+## Calling regenerate() discards state and regenerates the clouds,
+## and should never be called while the clouds are visible to the player.
+## Since settings changes will not apply to already-generated chunks,
+## regenerate() must be called to apply changes.
 ##
-## Calling negotiate_cell_size() completely shifts the grid and discards all state.
-## It would be very visually jarring to see.
+## Parallax between cloud layers must be handled by having multiple generators.
+
+# Under the hood, there is a (logical) infinite grid of rectangular chunks,
+# each with one or more clouds.
+# When you call regenerate, it calculates the cell shape and size that is
+# statistically ideal for achieving the preferred cloud coverage and homogenous spacing.
 
 ## Scenes to generate as clouds.
-## Runtime changes will only apply to freshly generated cells and cause the effective cloud coverage to change.
-## Call negotiate_cell_sizes to apply changes to this value. Failure to do so may cause unusual behavior.
+## Call regenerate() to apply changes.
 @export var clouds : Array[PackedScene] = []
 
 ## Cloud velocity in pixels per second.
-## You may change this at any time.
 @export var cloud_vel : Vector2 = Vector2(-10, 0)
 
 ## Approximate fraction of space which should be covered in clouds.
 ## This is VERY approximate.
-## Call negotiate_cell_sizes to apply changes to this value. Failure to do so may cause unusual behavior.
+## Call regenerate() to apply changes.
 @export_range(0, 1) var density : float = 0.2
 
 ## The clouds to randomly place within a cell.
 ## More causes less predictable generation and marginally higher likelyhood of overlap.
-## Call negotiate_cell_sizes to apply changes to this value. Failure to do so may cause unusual behavior.
+## Call regenerate() to apply changes.
 @export var clouds_per_cell : int = 1
 
 ## If true, fill the rendered region with clouds instead of using the explicitly-specified rect.
-@export var do_use_active_camera_rect : bool = false
+@export var use_active_camera_rect : bool = false
+
+## If true, sprites have a 50% chance of being flipped horizontally when generated.
+@export var randomly_flip_h : bool = false
+
+## If true, sprites have a 50% chance of being flipped vertically when generated.
+@export var ranfomly_flip_v : bool = false
 
 ## The rect to fill with clouds, RELATIVE TO THIS NODE'S POSITION.
-## If do_use_active_camera_rect is true, this has no effect.
+## If use_active_camera_rect is true, this has no effect.
 @export var cloudy_region : Rect2 = Rect2(-320, -180, 640, 360)
+
+@export_group("Advanced")
+
+## If true, teleporting the camera so as to invalidate all existing state
+## will NO LONGER cause regenerate() to be called.
+@export var disable_auto_regeneration : bool = false 
 
 # Cumulative offset as a result of cloud motion
 var cloud_offset : Vector2 = Vector2.ZERO
 
-# The dimensions of cells. Set by negotiate_cell_size()
+# The dimensions of cells. Set by regenerate()
 var cell_width : float = 1
 var cell_height : float = 1
 
@@ -56,7 +70,7 @@ var instanced_clouds_sampled_position : Vector2i
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	negotiate_cell_size()
+	regenerate()
 
 func _process(delta: float) -> void:
 	cloud_offset += cloud_vel * delta
@@ -90,7 +104,10 @@ func _process(delta: float) -> void:
 		
 		if not region_to_sample.intersects(cs_region):
 			#print("Discarding State")
-			discard_state()
+			if disable_auto_regeneration:
+				discard_state()
+			else:
+				regenerate()
 	
 	# This can't be an else cus the previous block may discard state,
 	# resetting the instanced_clouds to an empty array.
@@ -219,7 +236,7 @@ func instance_cell(x : int, y : int) -> Node2D:
 
 func get_cloudy_region() -> Rect2:
 	# Obtain the region to fill with clouds.
-	if do_use_active_camera_rect:
+	if use_active_camera_rect:
 		var active_camera : Camera2D = get_viewport().get_camera_2d()
 		if active_camera == null:
 			return get_viewport_rect()
@@ -230,7 +247,10 @@ func get_cloudy_region() -> Rect2:
 			return Rect2(top_left, visible_size)
 	
 	else:
-		return cloudy_region
+		return Rect2(
+			cloudy_region.position + global_position,
+			cloudy_region.size
+		)
 
 ## Discards the state, forcing cloud regeneration.
 ## Necessary to apply the effect of changing the seed.
@@ -247,7 +267,7 @@ func discard_state() -> void:
 ## Clouds are generated in random locations within cells in a grid
 ## Sets the size and shape of the cells to achieve the preferred cloud coverage and homogenous spacing,
 ## given the available cloud scenes.
-func negotiate_cell_size() -> void:
+func regenerate() -> void:
 	# Special case is handled by deleting all clouds.
 	if density <= 0:
 		return
