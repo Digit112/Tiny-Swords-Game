@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cfj34ro1pcedi"]
 
 [ext_resource type="Script" uid="uid://bf2y2s2jvkyur" path="res://Testing/EnumerateSpriteAnimationsinScenes.gd" id="1_f0j28"]
-[ext_resource type="PackedScene" uid="uid://cvl0d010u8k8i" path="res://Units/Archer/Archer.tscn" id="2_w8n40"]
-[ext_resource type="PackedScene" uid="uid://b6uqe3su4pv36" path="res://Units/Lancer/Lancer.tscn" id="3_ii5ik"]
-[ext_resource type="PackedScene" uid="uid://v4ulryg54g7n" path="res://Units/Monk/Monk.tscn" id="4_f5pt5"]
-[ext_resource type="PackedScene" uid="uid://cbeal57vp4pe2" path="res://Units/Pawn/Pawn.tscn" id="5_k1oih"]
-[ext_resource type="PackedScene" uid="uid://db6naf2dspcgt" path="res://Units/Warrior/Warrior.tscn" id="6_54ubm"]
+[ext_resource type="PackedScene" uid="uid://cvl0d010u8k8i" path="res://Units/Archer.tscn" id="2_w8n40"]
+[ext_resource type="PackedScene" uid="uid://b6uqe3su4pv36" path="res://Units/Lancer.tscn" id="3_ii5ik"]
+[ext_resource type="PackedScene" uid="uid://v4ulryg54g7n" path="res://Units/Monk.tscn" id="4_f5pt5"]
+[ext_resource type="PackedScene" uid="uid://cbeal57vp4pe2" path="res://Units/Pawn.tscn" id="5_k1oih"]
+[ext_resource type="PackedScene" uid="uid://db6naf2dspcgt" path="res://Units/Warrior.tscn" id="6_54ubm"]
 
 [node name="AllUnitAnimations" type="Node2D" unique_id=562510823]
 script = ExtResource("1_f0j28")

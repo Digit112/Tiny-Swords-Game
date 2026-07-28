@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://e6hijcf460k5"]
 
-[ext_resource type="PackedScene" uid="uid://cbeal57vp4pe2" path="res://Units/Pawn/Pawn.tscn" id="1_cltiw"]
+[ext_resource type="PackedScene" uid="uid://cbeal57vp4pe2" path="res://Units/Pawn.tscn" id="1_cltiw"]
 [ext_resource type="Script" uid="uid://x4t4dno1363p" path="res://Testing/Harvesting/posessed_pawn.gd" id="2_sw00a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5ivm"]
