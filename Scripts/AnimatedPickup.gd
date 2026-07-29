@@ -1,5 +1,7 @@
 extends AnimatedSprite2D
 
+# Used for gold pickups that have glisten animations
+
 var pop_up_height : float = 0
 
 var animation_timer : float

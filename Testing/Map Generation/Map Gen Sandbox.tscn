@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b7q8425s4qu4f"]
+
+[ext_resource type="Script" uid="uid://b2p01upqkk7u7" path="res://Testing/Map Generation/noise_sandbox.gd" id="1_1o3wp"]
+
+[node name="NoiseSandbox" type="Node2D" unique_id=1164369430]
+script = ExtResource("1_1o3wp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1805349187]
