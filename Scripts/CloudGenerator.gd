@@ -43,7 +43,7 @@ class_name CloudGenerator extends Node2D
 @export var randomly_flip_h : bool = false
 
 ## If true, sprites have a 50% chance of being flipped vertically when generated.
-@export var ranfomly_flip_v : bool = false
+@export var randomly_flip_v : bool = false
 
 ## The rect to fill with clouds, RELATIVE TO THIS NODE'S POSITION.
 ## If use_active_camera_rect is true, this has no effect.
@@ -91,8 +91,8 @@ func _process(delta: float) -> void:
 	region_to_sample.size += Vector2i(2, 2)
 	
 	# Shrink rect as a test.
-	region_to_sample.position += Vector2i(4, 4)
-	region_to_sample.size -= Vector2i(8, 8)
+	#region_to_sample.position += Vector2i(4, 4)
+	#region_to_sample.size -= Vector2i(8, 8)
 	
 	# Obtain the previously sampled region, from which the new region may be obtained.
 	var cs_region : Rect2i # currently sampled region
@@ -166,51 +166,66 @@ func _process(delta: float) -> void:
 		
 		cs_region.size.x += 1
 	
-	if true:
-		# Cull the managed cells that are no longer within the cloudy area.
-		while region_to_sample.position.y > cs_region.position.y:
-			#print("Culling up")
-			for cell in instanced_clouds[0]:
-				#print("Culling " + cell.name)
-				cell.queue_free()
-			
-			instanced_clouds.remove_at(0)
-			
-			cs_region.position.y += 1
-			cs_region.size.y -= 1
-			
-		while region_to_sample.end.y < cs_region.end.y:
-			#print("Culling down")
-			for cell in instanced_clouds[-1]:
-				#print("Culling " + cell.name)
-				cell.queue_free()
-			
-			instanced_clouds.remove_at(-1)
-			
-			cs_region.size.y -= 1
+	# Cull the managed cells that are no longer within the cloudy area.
+	while region_to_sample.position.y > cs_region.position.y:
+		if len(instanced_clouds) == 0:
+			assert(false, "Attmpting to cull top side but no rows exist.\nSampled Region: {0}\nComplete state grid: {1}".format([cs_region, instanced_clouds]))
+			return
 		
-		while region_to_sample.position.x > cs_region.position.x:
-			#print("Culling left")
-			for y : int in range(cs_region.position.y, cs_region.end.y+1):
-				var index : int = y - cs_region.position.y
-				var cell = instanced_clouds[index][0]
-				#print("Culling " + cell.name)
-				cell.queue_free()
-				instanced_clouds[index].remove_at(0)
-			
-			cs_region.position.x += 1
-			cs_region.size.x -= 1
+		#print("Culling up")
+		for cell in instanced_clouds[0]:
+			#print("Culling " + cell.name)
+			cell.queue_free()
 		
-		while region_to_sample.end.x < cs_region.end.x:
-			#print("Culling right")
-			for y : int in range(cs_region.position.y, cs_region.end.y+1):
-				var index : int = y - cs_region.position.y
-				var cell = instanced_clouds[index][-1]
-				#print("Culling " + cell.name)
-				cell.queue_free()
-				instanced_clouds[index].remove_at(-1)
+		instanced_clouds.remove_at(0)
+		
+		cs_region.position.y += 1
+		cs_region.size.y -= 1
+		
+	while region_to_sample.end.y < cs_region.end.y:
+		if len(instanced_clouds) == 0:
+			assert(false, "Attmpting to cull bottom side but no rows exist.\nSampled Region: {0}\nComplete state grid: {1}".format([cs_region, instanced_clouds]))
+			return
+		
+		#print("Culling down")
+		for cell in instanced_clouds[-1]:
+			#print("Culling " + cell.name)
+			cell.queue_free()
+		
+		instanced_clouds.remove_at(-1)
+		
+		cs_region.size.y -= 1
+	
+	while region_to_sample.position.x > cs_region.position.x:
+		#print("Culling left")
+		for y : int in range(cs_region.position.y, cs_region.end.y+1):
+			var index : int = y - cs_region.position.y
+			if len(instanced_clouds) <= index or len(instanced_clouds[index]) == 0:
+				assert(false, "Culling left side column but no cells exist in row {0} or the row does not exist.\nSampled Region: {1}\nComplete state grid: {2}".format([index, cs_region, instanced_clouds]))
+				return
 			
-			cs_region.size.x -= 1
+			var cell = instanced_clouds[index][0]
+			#print("Culling " + cell.name)
+			cell.queue_free()
+			instanced_clouds[index].remove_at(0)
+		
+		cs_region.position.x += 1
+		cs_region.size.x -= 1
+	
+	while region_to_sample.end.x < cs_region.end.x:
+		#print("Culling right")
+		for y : int in range(cs_region.position.y, cs_region.end.y+1):
+			var index : int = y - cs_region.position.y
+			if len(instanced_clouds) <= index or len(instanced_clouds[index]) == 0:
+				assert(false, "Culling right side column but cells exist in row {0} or the row does not exist.\nSampled Region: {1}\nComplete state grid: {2}".format([index, cs_region, instanced_clouds]))
+				return
+			
+			var cell = instanced_clouds[index][-1]
+			#print("Culling " + cell.name)
+			cell.queue_free()
+			instanced_clouds[index].remove_at(-1)
+		
+		cs_region.size.x -= 1
 	
 	#print("From: ", cs_region)
 	#print("To:   ", region_to_sample)
@@ -224,11 +239,17 @@ func instance_cell(x : int, y : int) -> Node2D:
 	#print("    Instancing ", x, ", ", y)
 	var cell = Node2D.new()
 	cell.global_position = Vector2(x, y) * Vector2(cell_width, cell_height) + cloud_offset
+	cell.name = "Cell " + str(x) + ", " + str(y)
 	
 	for i : int in clouds_per_cell:
 		var cloud : Node2D = clouds[randi_range(0, len(clouds)-1)].instantiate()
 		cloud.position = Vector2(randf()*cell_width, randf()*cell_height)
-		cell.name = "Cell " + str(x) + ", " + str(y)
+		
+		if randomly_flip_h:
+			cloud.flip_h = randi() % 2 == 0
+		if randomly_flip_v:
+			cloud.flip_v = randi() % 2 == 0
+		
 		cell.add_child(cloud)
 	
 	add_child(cell)
@@ -239,19 +260,34 @@ func get_cloudy_region() -> Rect2:
 	if use_active_camera_rect:
 		var active_camera : Camera2D = get_viewport().get_camera_2d()
 		if active_camera == null:
-			return get_viewport_rect()
+			return convert_to_unsigned_rect2(get_viewport_rect())
 		
 		else:
 			var visible_size := get_viewport_rect().size / active_camera.zoom
 			var top_left := active_camera.global_position - (visible_size / 2.0)
-			return Rect2(top_left, visible_size)
+			
+			return convert_to_unsigned_rect2(Rect2(top_left, visible_size))
 	
 	else:
-		return Rect2(
+		return convert_to_unsigned_rect2(Rect2(
 			cloudy_region.position + global_position,
 			cloudy_region.size
-		)
+		))
 
+## Removes negative size from a rect.
+func convert_to_unsigned_rect2(val : Rect2) -> Rect2:
+	val = Rect2(val) # Clone
+	
+	if val.size.x < 0:
+		val.position.x += val.size.x
+		val.size.x *= -1
+	
+	if val.size.y < 0:
+		val.position.y += val.size.y
+		val.size.y *= -1
+	
+	return val
+	
 ## Discards the state, forcing cloud regeneration.
 ## Necessary to apply the effect of changing the seed.
 func discard_state() -> void:

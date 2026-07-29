@@ -17,9 +17,11 @@ y_sort_enabled = true
 script = ExtResource("1_ka3ex")
 clouds = Array[PackedScene]([ExtResource("2_6k7rx"), ExtResource("3_6gpng"), ExtResource("4_r4e4s"), ExtResource("5_167di"), ExtResource("6_0cq3s"), ExtResource("7_fd2wo"), ExtResource("8_8bc15"), ExtResource("9_emfqi")])
 density = 0.6
+use_active_camera_rect = true
+randomly_flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=75214814]
-zoom = Vector2(0.18, 0.18)
+zoom = Vector2(0.2, 0.2)
 script = ExtResource("3_f2k0y")
 mode = 1
 
