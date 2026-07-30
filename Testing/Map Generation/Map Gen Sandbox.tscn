@@ -8,5 +8,7 @@ noise_type = 5
 [node name="NoiseSandbox" type="Node2D" unique_id=1164369430]
 script = ExtResource("1_1o3wp")
 terrain_color_noise = SubResource("FastNoiseLite_pejk7")
+width = null
+height = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1805349187]
