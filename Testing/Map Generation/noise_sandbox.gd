@@ -7,6 +7,12 @@ extends Node2D
 ## Whether to generate 1, 2, or 3 layers.
 @export_range(1, 3, 1) var layer_count : int
 
+## Width of the grid to generate in tiles.
+@export var width : int = 32
+
+## Height of the grid to generate in tiles.
+@export var height : int = 32
+
 @export_group("Noise")
 
 ## Noise used to generate the terrain color.
@@ -27,13 +33,28 @@ extends Node2D
 ## the height threshhold to determine whether the terrain exists or is empty.
 @export var terrain_layer_3_noise : FastNoiseLite
 
-@onready var sprite = $Sprite2D
+## Indexed as terrain[layer][row][col] and contains booleans.
+var terrain : Array[Array] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	regenerate()
 
-
 func regenerate() -> void:
-	pass
+	terrain = []
+	var terrain_noise_layers = [
+		terrain_layer_1_noise,
+		terrain_layer_2_noise,
+		terrain_layer_3_noise
+	]
 	
+	var layers : Array[Image] = []
+	for i in layer_count:
+		terrain.append(terrain_noise_layers[i].get_image(width, height))
+	
+	for layer in layer_count:
+		terrain.append([])
+		for row in width:
+			terrain[0].append([])
+			for cell in height:
+			
