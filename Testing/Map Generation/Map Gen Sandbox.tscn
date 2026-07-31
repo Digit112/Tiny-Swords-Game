@@ -5,9 +5,10 @@
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pejk7"]
 noise_type = 5
+frequency = 0.0065
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_e5r1k"]
-frequency = 0.0348
+frequency = 0.0486
 
 [node name="NoiseSandbox" type="Node2D" unique_id=1164369430]
 script = ExtResource("1_1o3wp")

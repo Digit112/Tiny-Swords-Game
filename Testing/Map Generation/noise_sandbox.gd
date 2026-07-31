@@ -206,12 +206,32 @@ func regenerate() -> void:
 						atlas_coords = get_upper_layer_land_tile(top_is_land, right_is_land, bottom_is_land, left_is_land)
 					
 					new_level.set_cell(Vector2i(x, y), 1, atlas_coords)
-		
-		# Set pillar tiles
-		for x : int in width:
-			for y : int in range(1, height):
-				if terrain[x][y] < terrain[x][y-1]:
-					pass
+	
+	# Set pillar tiles
+	for x : int in width:
+		for y : int in range(0, height-1):
+			if terrain[x][y] > terrain[x][y+1] and terrain[x][y] > 1:
+				for i : int in terrain[x][y] - terrain[x][y+1]:
+					print(terrain[x][y], ", ", terrain[x][y+1], ", ", i)
+					var left_is_land  : bool = x > 0       and terrain[x-1][y] >= terrain[x][y] - i
+					var right_is_land : bool = x < width-1 and terrain[x+1][y] >= terrain[x][y] - i
+					print(left_is_land, ", ", right_is_land)
+					
+					var level = terrain[x][y]-1
+					var atlas_coords : Vector2i
+					if level == 0:
+						atlas_coords = get_bottom_layer_pillar_tile(left_is_land, right_is_land)
+					else:
+						atlas_coords = get_upper_layer_pillar_tile(left_is_land, right_is_land)
+					
+					print(level)
+					print(atlas_coords)
+					print(x, ", ", y, " = ", y+1+i)
+					levels[level].set_cell(
+						Vector2i(x, y+1+i),
+						1,
+						atlas_coords
+					)
 
 func _are_cutoffs_valid() -> bool:
 	# Allows margin of error for floating-point imprecision.
