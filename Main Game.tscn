@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bxtwa2lbm8ysk"]
+
+[ext_resource type="Script" uid="uid://coei4ejvsurwf" path="res://Scripts/MainGame.gd" id="1_vy74w"]
+[ext_resource type="Script" uid="uid://bw5dvsf0wqpt" path="res://Scripts/Systems/InventoryManager.gd" id="2_bjc83"]
+
+[node name="MainGame" type="Node" unique_id=1985805445]
+process_mode = 3
+script = ExtResource("1_vy74w")
+
+[node name="Systems" type="Node" parent="." unique_id=1924688129]
+process_mode = 1
+
+[node name="InventoryManager" type="Node" parent="Systems" unique_id=1342573093]
+script = ExtResource("2_bjc83")
+
+[node name="World" type="Node2D" parent="." unique_id=1623576854]
+process_mode = 1
+
+[node name="LevelRoot" type="Node2D" parent="World" unique_id=566949793]
+unique_name_in_owner = true
+
+[node name="EntityRoot" type="Node2D" parent="World" unique_id=867883554]
+unique_name_in_owner = true
+
+[node name="EffectRoot" type="Node2D" parent="World" unique_id=1512570628]
+unique_name_in_owner = true
+
+[node name="HUDLayer" type="CanvasLayer" parent="." unique_id=662731722]
+process_mode = 1
+layer = 10
+
+[node name="HUDRoot" type="Control" parent="HUDLayer" unique_id=397977072]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=483471881]
+process_mode = 2
+layer = 20
+
+[node name="PauseRoot" type="Control" parent="PauseLayer" unique_id=614663290]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=416999744]
+process_mode = 3
+layer = 30
+
+[node name="TransitionRoot" type="Control" parent="TransitionLayer" unique_id=205219198]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DebugLayer" type="CanvasLayer" parent="." unique_id=848852972]
+process_mode = 3
+layer = 100
+
+[node name="DebugRoot" type="Control" parent="DebugLayer" unique_id=1573994069]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

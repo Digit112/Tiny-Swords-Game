@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c08clx0nt8siv"]
 
 [ext_resource type="Texture2D" uid="uid://c53yuh3s0nbno" path="res://Assets/Tiny Swords/Terrain/Resources/Gold/Gold Resource/Gold_Resource_Highlight.png" id="1_lpqvb"]
-[ext_resource type="Script" uid="uid://ci4twlk68uhkm" path="res://Scripts/AnimatedPickup.gd" id="2_lpqvb"]
+[ext_resource type="Script" uid="uid://ci4twlk68uhkm" path="res://Scripts/Trivial/AnimatedPickup.gd" id="2_lpqvb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u77w5"]
 atlas = ExtResource("1_lpqvb")

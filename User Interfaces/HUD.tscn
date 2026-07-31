@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cyhp51nkylwcp"]
+
+[ext_resource type="Texture2D" uid="uid://d37jeq1fpb2vm" path="res://Assets/Tiny Swords/Terrain/Resources/Gold/Gold Resource/Gold_Resource Cropped.png" id="1_2li28"]
+[ext_resource type="Texture2D" uid="uid://dvj3ey3mbrc45" path="res://Assets/Tiny Swords/Terrain/Resources/Meat/Meat Resource/Meat Resource.png" id="2_5n13c"]
+[ext_resource type="Texture2D" uid="uid://bdbrie04i5o0q" path="res://Assets/Tiny Swords/Terrain/Resources/Wood/Wood Resource/Wood Resource.png" id="3_kgds7"]
+
+[node name="Hud" type="Control" unique_id=1997415363]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=425555050]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer" unique_id=1255780606]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/CenterContainer" unique_id=1405919736]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer/HBoxContainer" unique_id=6668163]
+layout_mode = 2
+texture = ExtResource("1_2li28")
+
+[node name="Label" type="Label" parent="HBoxContainer/CenterContainer/HBoxContainer" unique_id=241200167]
+layout_mode = 2
+text = "####"
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer" unique_id=332948742]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/CenterContainer2" unique_id=294580914]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer2/HBoxContainer" unique_id=1607623290]
+layout_mode = 2
+texture = ExtResource("2_5n13c")
+
+[node name="Label" type="Label" parent="HBoxContainer/CenterContainer2/HBoxContainer" unique_id=1298226523]
+layout_mode = 2
+text = "####"
+
+[node name="CenterContainer3" type="CenterContainer" parent="HBoxContainer" unique_id=991590226]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/CenterContainer3" unique_id=1958941700]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer3/HBoxContainer" unique_id=62593104]
+layout_mode = 2
+texture = ExtResource("3_kgds7")
+
+[node name="Label" type="Label" parent="HBoxContainer/CenterContainer3/HBoxContainer" unique_id=382458068]
+layout_mode = 2
+text = "####"
