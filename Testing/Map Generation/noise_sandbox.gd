@@ -193,7 +193,7 @@ func regenerate() -> void:
 		# Set plain land tiles.
 		for x : int in width:
 			for y : int in height:
-				if terrain[x][y] == level + 1:
+				if terrain[x][y] >= level + 1:
 					var top_is_land    : bool = y > 0        and terrain[x  ][y-1] >= level + 1
 					var right_is_land  : bool = x < width-1  and terrain[x+1][y  ] >= level + 1
 					var bottom_is_land : bool = y < height-1 and terrain[x  ][y+1] >= level + 1
@@ -209,26 +209,25 @@ func regenerate() -> void:
 	
 	# Set pillar tiles
 	for x : int in width:
-		for y : int in range(0, height-1):
-			if terrain[x][y] > terrain[x][y+1] and terrain[x][y] > 1:
-				for i : int in terrain[x][y] - terrain[x][y+1]:
-					print(terrain[x][y], ", ", terrain[x][y+1], ", ", i)
+		for y : int in range(0, height):
+			if (y == height-1 or terrain[x][y] > terrain[x][y+1]) and terrain[x][y] > 1:
+				var target_height : int = 1
+				if y < height - 1:
+					target_height = terrain[x][y+1]
+				
+				for i : int in terrain[x][y] - target_height:
 					var left_is_land  : bool = x > 0       and terrain[x-1][y] >= terrain[x][y] - i
 					var right_is_land : bool = x < width-1 and terrain[x+1][y] >= terrain[x][y] - i
-					print(left_is_land, ", ", right_is_land)
 					
-					var level = terrain[x][y]-1
+					var level = terrain[x][y]-1-i
 					var atlas_coords : Vector2i
 					if level == 0:
 						atlas_coords = get_bottom_layer_pillar_tile(left_is_land, right_is_land)
 					else:
 						atlas_coords = get_upper_layer_pillar_tile(left_is_land, right_is_land)
 					
-					print(level)
-					print(atlas_coords)
-					print(x, ", ", y, " = ", y+1+i)
 					levels[level].set_cell(
-						Vector2i(x, y+1+i),
+						Vector2i(x, y+1),
 						1,
 						atlas_coords
 					)

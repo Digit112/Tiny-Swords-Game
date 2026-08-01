@@ -8,13 +8,16 @@ noise_type = 5
 frequency = 0.0065
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_e5r1k"]
-frequency = 0.0486
+noise_type = 0
+seed = 5
+frequency = 0.0161
+fractal_octaves = 4
 
 [node name="NoiseSandbox" type="Node2D" unique_id=1164369430]
 script = ExtResource("1_1o3wp")
-width = 64
-height = 64
-cutoffs = Array[float]([-0.2, 0.2])
+width = 512
+height = 512
+cutoffs = Array[float]([0.2, 0.5, 0.8])
 atlas = ExtResource("2_e5r1k")
 terrain_color_noise = SubResource("FastNoiseLite_pejk7")
 terrain_noise = SubResource("FastNoiseLite_e5r1k")
