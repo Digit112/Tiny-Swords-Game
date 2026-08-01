@@ -9,3 +9,21 @@
 	- Make Pickups go to inventory
 
 - Make Pickups stack.
+
+Nice to haves:
+	- Fog of war
+	- Sailing Combat
+	- Neutral Mobs
+
+Feature Timeline:
+	- Scatter Resource Nodes over the terrain gen.
+	- Unit commands: Mine, Guard, Garrison, Move, Attack
+		- Unit selection.
+		- Unit navigation over the terrain.
+		- Unit interactions with resource nodes and entities
+	- Building Construction
+		- Abstract terrain interactions (e.g. can_build(), set_terrain_height())
+	
+	- Enemy AI:
+		- Automated unit management, resource gathering, combat.
+		- Automated building.

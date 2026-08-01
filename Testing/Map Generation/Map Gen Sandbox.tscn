@@ -8,9 +8,9 @@ noise_type = 5
 frequency = 0.0065
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_e5r1k"]
-noise_type = 0
+noise_type = 2
 seed = 5
-frequency = 0.0161
+frequency = 0.0154
 fractal_octaves = 4
 
 [node name="NoiseSandbox" type="Node2D" unique_id=1164369430]
