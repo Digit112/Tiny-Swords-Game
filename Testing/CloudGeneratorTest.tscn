@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfmxqv7efrftl"]
 
-[ext_resource type="Script" uid="uid://cplvek83a3dj1" path="res://Scripts/CloudGenerator.gd" id="1_ka3ex"]
+[ext_resource type="Script" uid="uid://cplvek83a3dj1" path="res://Scripts/Systems/Cloud Generation/CloudGenerator.gd" id="1_ka3ex"]
 [ext_resource type="PackedScene" uid="uid://cj5wy8icd1k4j" path="res://Clouds/Cloud1.tscn" id="2_6k7rx"]
 [ext_resource type="Script" uid="uid://caahelsjf4cr0" path="res://Testing/Unpauser.gd" id="3_3vd7x"]
 [ext_resource type="PackedScene" uid="uid://0o3sr2l28ujs" path="res://Clouds/Cloud2.tscn" id="3_6gpng"]

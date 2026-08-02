@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxtwa2lbm8ysk"]
 
 [ext_resource type="Script" uid="uid://coei4ejvsurwf" path="res://Scripts/MainGame.gd" id="1_vy74w"]
-[ext_resource type="Script" uid="uid://bw5dvsf0wqpt" path="res://Scripts/Systems/InventoryManager.gd" id="2_bjc83"]
+[ext_resource type="Script" uid="uid://bw5dvsf0wqpt" path="res://Scripts/Systems/Inventory/InventoryManager.gd" id="2_bjc83"]
 
 [node name="MainGame" type="Node" unique_id=1985805445]
 process_mode = 3

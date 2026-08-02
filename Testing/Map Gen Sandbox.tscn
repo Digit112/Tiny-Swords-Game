@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7q8425s4qu4f"]
 
-[ext_resource type="Script" uid="uid://b2p01upqkk7u7" path="res://Testing/Map Generation/noise_sandbox.gd" id="1_1o3wp"]
-[ext_resource type="TileSet" uid="uid://bvmtk1cb5avgj" path="res://Terrain.tres" id="2_e5r1k"]
+[ext_resource type="Script" uid="uid://b2p01upqkk7u7" path="res://Scripts/Systems/Terrain Generation/TerrainGenerator.gd" id="1_hoxkr"]
+[ext_resource type="TileSet" uid="uid://bvmtk1cb5avgj" path="res://Terrain.tres" id="2_hoxkr"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pejk7"]
 noise_type = 5
@@ -9,15 +9,15 @@ frequency = 0.0065
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_e5r1k"]
 noise_type = 2
-seed = 5
-frequency = 0.0154
+seed = 7
+frequency = 0.0188
 fractal_octaves = 4
 
 [node name="NoiseSandbox" type="Node2D" unique_id=1164369430]
-script = ExtResource("1_1o3wp")
-width = 512
-height = 512
-cutoffs = Array[float]([0.2, 0.5, 0.8])
-atlas = ExtResource("2_e5r1k")
+script = ExtResource("1_hoxkr")
+width = 64
+height = 64
+cutoffs = Array[float]([-0.2, 0.2, 0.5, 0.8])
+tile_set = ExtResource("2_hoxkr")
 terrain_color_noise = SubResource("FastNoiseLite_pejk7")
 terrain_noise = SubResource("FastNoiseLite_e5r1k")
