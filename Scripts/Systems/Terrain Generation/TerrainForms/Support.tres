@@ -5,6 +5,5 @@
 [resource]
 script = ExtResource("1_yelxs")
 identity = &"SUPPORT"
-weight = 8
 always_draw_wall = true
 metadata/_custom_type_script = "uid://d04otj4o4lyqu"

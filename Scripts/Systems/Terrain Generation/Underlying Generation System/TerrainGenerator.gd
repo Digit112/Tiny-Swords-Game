@@ -126,6 +126,7 @@ func _ready() -> void:
 func generate() -> void:
 	# Generate world
 	regenerate_terrain()
+	_debug_print_terrain()
 	
 	# Render
 	regenerate_blank_layers()
@@ -164,9 +165,9 @@ func regenerate_terrain() -> void:
 	
 	# TODO: Replace this terrain matrix with a packed int array for space and performance reasons.
 	terrain = []
-	for x : int in width:
+	for y : int in height:
 		terrain.append([])
-		for y : int in height:
+		for x : int in width:
 			var sample : float = accessor.call(x, y, noise_data)
 			
 			# Set terrain height according to sample and cutoffs.
@@ -419,3 +420,29 @@ func _are_cutoffs_valid() -> bool:
 			return false
 	
 	return true
+
+func _debug_print_terrain():
+	var my_str := ""
+	for row in terrain:
+		for pillar in row:
+			if pillar.form is TerrainFormSupport:
+				if pillar.height == -1:
+					my_str += "~~"
+				else:
+					my_str += str(pillar.height).lpad(2, ".")
+			else:
+				match pillar.form.direction:
+					CardinalDirection.NORTH:
+						my_str += "^"
+					CardinalDirection.SOUTH:
+						my_str += "v"
+					CardinalDirection.EAST:
+						my_str += ">"
+					CardinalDirection.WEST:
+						my_str += "<"
+				
+				my_str += str(pillar.height)
+		
+		my_str += "\n"
+	
+	print(my_str)

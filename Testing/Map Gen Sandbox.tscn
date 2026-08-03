@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://b2p01upqkk7u7" path="res://Scripts/Systems/Terrain Generation/Underlying Generation System/TerrainGenerator.gd" id="1_hoxkr"]
 [ext_resource type="TileSet" uid="uid://bvmtk1cb5avgj" path="res://Terrain.tres" id="2_hoxkr"]
 [ext_resource type="Resource" uid="uid://c0fdhttuoqmpw" path="res://Scripts/Systems/Terrain Generation/TerrainForms/Support.tres" id="3_5bwiu"]
-[ext_resource type="Script" uid="uid://u2exegpp3i0l" path="res://Scripts/Systems/Terrain Generation/Underlying Generation System/TerrainForm.gd" id="4_c13vl"]
-[ext_resource type="Resource" uid="uid://2dt0iiaxd0qd" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampNorth.tres" id="5_oywl5"]
-[ext_resource type="Resource" uid="uid://brhmmbwn3542r" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampSouth.tres" id="6_tlj6s"]
-[ext_resource type="Resource" uid="uid://dbnvs5qle0r3j" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampEast.tres" id="7_3fryq"]
-[ext_resource type="Resource" uid="uid://lsk3ywsde8l7" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampWest.tres" id="8_5kd0a"]
+[ext_resource type="Script" uid="uid://u2exegpp3i0l" path="res://Scripts/Systems/Terrain Generation/Underlying Generation System/TerrainForm.gd" id="4_tlj6s"]
+[ext_resource type="Resource" uid="uid://2dt0iiaxd0qd" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampNorth.tres" id="5_3fryq"]
+[ext_resource type="Resource" uid="uid://brhmmbwn3542r" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampSouth.tres" id="6_5kd0a"]
+[ext_resource type="Resource" uid="uid://dbnvs5qle0r3j" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampEast.tres" id="7_fbal4"]
+[ext_resource type="Resource" uid="uid://lsk3ywsde8l7" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampWest.tres" id="8_c6g7b"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pejk7"]
 noise_type = 5
@@ -21,10 +21,12 @@ fractal_octaves = 4
 
 [node name="NoiseSandbox" type="Node2D" unique_id=1164369430]
 script = ExtResource("1_hoxkr")
+width = 20
+height = 12
 cutoffs = Array[float]([-0.2, 0.2, 0.5, 0.8])
 tile_set = ExtResource("2_hoxkr")
 support_form = ExtResource("3_5bwiu")
-cap_forms = Array[ExtResource("4_c13vl")]([ExtResource("3_5bwiu"), ExtResource("5_oywl5"), ExtResource("6_tlj6s"), ExtResource("7_3fryq"), ExtResource("8_5kd0a")])
+cap_forms = Array[ExtResource("4_tlj6s")]([ExtResource("5_3fryq"), ExtResource("6_5kd0a"), ExtResource("7_fbal4"), ExtResource("8_c6g7b"), ExtResource("3_5bwiu")])
 terrain_color_noise = SubResource("FastNoiseLite_pejk7")
 terrain_noise = SubResource("FastNoiseLite_e5r1k")
 

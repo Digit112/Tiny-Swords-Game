@@ -60,7 +60,7 @@ func do_connect_land(
 		if pillar2.form.identity == &"SUPPORT":
 			return true
 		
-		# Connect to the east or west sides of an east or weest ramp
+		# Connect to the east or west sides of an east or west ramp
 		elif (
 			pillar2.form.identity == &"RAMP" and (
 				pillar2.form.direction == TerrainGenerator.CardinalDirection.EAST or
