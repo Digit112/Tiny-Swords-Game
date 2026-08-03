@@ -1,3 +1,4 @@
+@tool
 class_name TerrainPillar extends Object
 
 ## The game world is actually a 3-dimensional voxel space
@@ -15,19 +16,10 @@ enum Form {
 }
 
 var height : int
-var form : Form
+var form : TerrainForm
 var variant : int
 
-func _init(init_height : int = -1, init_form : Form = Form.FLAT, init_variant : int = 1) -> void:
+func _init(init_form : TerrainForm, init_height : int = -1, init_variant : int = 1) -> void:
 	height = init_height
 	form = init_form
 	variant = init_variant
-
-func is_flat() -> bool:
-	return form == Form.FLAT
-
-func is_east_west_ramp() -> bool:
-	return form == Form.RAMP_EAST or form == Form.RAMP_WEST
-
-func is_noth_south_ramp() -> bool:
-	return form == Form.RAMP_NORTH or form == Form.RAMP_SOUTH

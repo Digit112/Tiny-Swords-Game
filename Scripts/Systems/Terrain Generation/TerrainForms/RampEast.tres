@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TerrainFormRamp" format=3 uid="uid://dbnvs5qle0r3j"]
+
+[ext_resource type="Script" uid="uid://cfyt6ctd1wcwn" path="res://Scripts/Systems/Terrain Generation/TerrainFormRamp.gd" id="1_gsk46"]
+
+[resource]
+script = ExtResource("1_gsk46")
+direction = 2
+identity = &"RAMP"
+always_draw_wall = true
+metadata/_custom_type_script = "uid://cfyt6ctd1wcwn"

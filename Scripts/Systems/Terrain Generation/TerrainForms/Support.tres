@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TerrainFormSupport" format=3 uid="uid://c0fdhttuoqmpw"]
+
+[ext_resource type="Script" uid="uid://d04otj4o4lyqu" path="res://Scripts/Systems/Terrain Generation/TerrainFormSupport.gd" id="1_yelxs"]
+
+[resource]
+script = ExtResource("1_yelxs")
+identity = &"SUPPORT"
+weight = 8
+always_draw_wall = true
+metadata/_custom_type_script = "uid://d04otj4o4lyqu"
