@@ -356,6 +356,15 @@ func clear_render():
 	
 	layers = []
 
+func is_opaque(atlas_coords : Vector2i) -> bool:
+	if atlas_coords.x < 0 or atlas_coords.y < 0:
+		return false
+	
+	if opaque_cache.has(atlas_coords):
+		return opaque_cache[atlas_coords]
+	
+	return false
+
 ## Returns the pillar at the specified position.
 ## Returns null if the specified position is outside the bounds of the map.
 func get_pillar(pillar_position : Vector2i) -> TerrainPillar:
