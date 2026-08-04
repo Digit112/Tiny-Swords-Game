@@ -57,7 +57,7 @@ func can_generate_here(terrain : TerrainGenerator, pillar_position : Vector2) ->
 				return false
 			if east_neighbor.form is TerrainFormRamp or west_neighbor.form is TerrainFormRamp:
 				return false
-			if east_neighbor.height != pillar.height and west_neighbor.height != pillar.height - 1:
+			if east_neighbor.height != pillar.height or west_neighbor.height != pillar.height - 1:
 				return false
 			
 			if north_neighbor != null and north_neighbor.form is TerrainFormRamp and (
@@ -119,7 +119,7 @@ func get_top_half_atlas_coords(
 		
 		# South tiles have no representation
 		TerrainGenerator.CardinalDirection.SOUTH:
-			return Vector2i(-1, -1)
+			return Vector2i(1, 4)
 		
 		TerrainGenerator.CardinalDirection.EAST:
 			return Vector2i(0, 4)

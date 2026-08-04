@@ -72,7 +72,10 @@ enum CardinalDirection {
 var terrain : Array[Array] = []
 
 # The TileMapLayer nodes that make up each successive layer of terrain.
-var layers : Array[TileMapLayer]
+var layers : Array[TileMapLayer] = []
+
+# A cache of whether a tile at the given coords is opaque
+var opaque_cache : Dictionary[Vector2i, bool] = {}
 
 # GENERATOR RULES
 
@@ -125,17 +128,17 @@ func _ready() -> void:
 ## Deletes any existing terrain and layers entirely before generating.
 func generate() -> void:
 	# Generate world
-	regenerate_terrain()
+	generate_terrain()
 	_debug_print_terrain()
 	
 	# Render
-	regenerate_blank_layers()
+	generate_blank_layers()
 	for x : int in width:
 		for y : int in height:
 			render_pillar(Vector2i(x, y))
 
 ## Regenerates the underlying 3D world by using the provided noise to make a heightmap.
-func regenerate_terrain() -> void:
+func generate_terrain() -> void:
 	assert(
 		_are_cutoffs_valid(),
 		"Cutoffs must be arranged from least to greatest and be between -1 and 1 (inclusive)."
@@ -258,7 +261,7 @@ func generate_terrain_form(pillar_position : Vector2i) -> TerrainForm:
 ## Generate sufficient TileMapLayer nodes to hold the terrain.
 ## Layers are shifted up according to their height,
 ## and wall layers are also shifted down one.
-func regenerate_blank_layers() -> void:
+func generate_blank_layers() -> void:
 	clear_render()
 	
 	for i : int in len(cutoffs):
@@ -301,20 +304,25 @@ func render_pillar(pillar_position : Vector2i) -> void:
 		var level := pillar.height - depth
 		var land_layer := get_layer(level, LayerPurpose.LAND)
 		
-		var connect_north := pillar.form.do_connect_land(
+		# Get form to draw at this depth.
+		var form := pillar.form
+		if depth > 0:
+			form = support_form
+		
+		var connect_north := form.do_connect_land(
 			self, pillar, north_neighbor, depth, CardinalDirection.NORTH
 		)
-		var connect_south := pillar.form.do_connect_land(
+		var connect_south := form.do_connect_land(
 			self, pillar, south_neighbor, depth, CardinalDirection.SOUTH
 		)
-		var connect_east := pillar.form.do_connect_land(
+		var connect_east := form.do_connect_land(
 			self, pillar, east_neighbor, depth, CardinalDirection.EAST
 		)
-		var connect_west := pillar.form.do_connect_land(
+		var connect_west := form.do_connect_land(
 			self, pillar, west_neighbor, depth, CardinalDirection.WEST
 		)
 		
-		var flat_tile := pillar.form.get_top_half_atlas_coords(
+		var flat_tile := form.get_top_half_atlas_coords(
 			self, pillar_position, level == 0,
 			connect_north, connect_south, connect_east, connect_west
 		)
@@ -323,29 +331,24 @@ func render_pillar(pillar_position : Vector2i) -> void:
 			pillar_position, 1, flat_tile
 		)
 		
-		if (
-			depth < max_depth or (
-				pillar.form.always_draw_wall and level > 0
-			)
-		):
+		var draw_excess_wall := form.always_draw_wall and level > 0
+		if depth < max_depth or draw_excess_wall:
 			var wall_layer := get_layer(level, LayerPurpose.WALL)
 			
-			var connet_wall_west := pillar.form.do_connect_wall(
+			var connect_wall_west := form.do_connect_wall(
 				self, pillar, west_neighbor,
 				depth, CardinalDirection.WEST
 			)
-			var connet_wall_east := pillar.form.do_connect_wall(
+			var connect_wall_east := form.do_connect_wall(
 				self, pillar, east_neighbor,
 				depth, CardinalDirection.EAST
 			)
 			
-			var wall_tile := pillar.form.get_bot_half_atlas_coords(
-				self, pillar_position, connet_wall_east, connet_wall_west
+			var wall_tile := form.get_bot_half_atlas_coords(
+				self, pillar_position, connect_wall_east, connect_wall_west
 			)
 			
-			wall_layer.set_cell(
-				pillar_position, 1, wall_tile
-			)
+			wall_layer.set_cell(pillar_position, 1, wall_tile)
 
 func clear_render():
 	for layer in layers:
