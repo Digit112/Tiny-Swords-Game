@@ -21,8 +21,8 @@ fractal_octaves = 4
 
 [node name="NoiseSandbox" type="Node2D" unique_id=1164369430]
 script = ExtResource("1_hoxkr")
-width = 20
-height = 12
+width = 128
+height = 72
 cutoffs = Array[float]([-0.2, 0.2, 0.5, 0.8])
 tile_set = ExtResource("2_hoxkr")
 support_form = ExtResource("3_5bwiu")
@@ -31,5 +31,5 @@ terrain_color_noise = SubResource("FastNoiseLite_pejk7")
 terrain_noise = SubResource("FastNoiseLite_e5r1k")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1831894962]
-position = Vector2(592, 419)
-zoom = Vector2(0.635, 0.635)
+position = Vector2(3976, 2237)
+zoom = Vector2(0.145, 0.145)

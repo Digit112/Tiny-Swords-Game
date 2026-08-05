@@ -133,3 +133,15 @@ func do_connect_wall(
 		return false
 	
 	return pillar1.height - depth <= pillar2.height
+
+## Accepts a value from (0, 0) to (1, 1) representing a position on this form,
+## with (0, 0) being the northwest corner, and returns the height of the ground at that position.
+## A value of 0 means that the height at this point is equal to the height for this pixel in the heigtmap.
+## For flat tiles, this should simply return 0 always.
+##
+## This function is very important and its behavior for inputs including 1s and 0s
+## matters because when the navigation agent needs to determine whether it can cross
+## a boundary between two cells, it checks the difference between their heights
+## along their shared edge.
+func get_relative_height_at_relative_position(relative_position : Vector2) -> float:
+	return 0

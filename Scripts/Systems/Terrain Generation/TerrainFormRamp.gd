@@ -156,6 +156,20 @@ func get_bot_half_atlas_coords(
 			assert(false)
 			return Vector2i(-1, -1)
 
+func get_relative_height_at_relative_position(relative_position : Vector2) -> float:
+	match direction:
+		TerrainGenerator.CardinalDirection.NORTH:
+			return -relative_position.y
+		TerrainGenerator.CardinalDirection.SOUTH:
+			return relative_position.y - 1
+		TerrainGenerator.CardinalDirection.EAST:
+			return relative_position.x - 1
+		TerrainGenerator.CardinalDirection.WEST:
+			return -relative_position.x
+		_:
+			assert(false)
+			return 0
+
 func do_connect_land(
 	_terrain : TerrainGenerator,
 	pillar1 : TerrainPillar,

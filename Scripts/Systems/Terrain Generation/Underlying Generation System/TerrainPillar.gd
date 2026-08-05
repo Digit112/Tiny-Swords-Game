@@ -23,3 +23,13 @@ func _init(init_form : TerrainForm, init_height : int = -1, init_variant : int =
 	height = init_height
 	form = init_form
 	variant = init_variant
+
+## Accepts a value from (0, 0) to (1, 1) representing a position on this pillar,
+## with (0, 0) being the northwest corner, and returns the height of the ground at that position.
+func get_height_at_relative_position(relative_position : Vector2) -> float:
+	assert(relative_position.x >= 0)
+	assert(relative_position.x <= 1)
+	assert(relative_position.y >= 0)
+	assert(relative_position.y <= 1)
+	
+	return height + form.get_relative_height_at_relative_position(relative_position)
