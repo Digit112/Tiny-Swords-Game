@@ -389,6 +389,20 @@ func get_layer(level : int, purpose : LayerPurpose) -> TileMapLayer:
 	
 	return layers[index]
 
+func get_neighbor(pillar_position : Vector2i, direction : CardinalDirection) -> TerrainPillar:
+	match direction:
+		CardinalDirection.NORTH:
+			return get_north_neighbor(pillar_position)
+		CardinalDirection.SOUTH:
+			return get_south_neighbor(pillar_position)
+		CardinalDirection.EAST:
+			return get_east_neighbor(pillar_position)
+		CardinalDirection.WEST:
+			return get_west_neighbor(pillar_position)
+		_:
+			assert(false)
+			return null
+
 ## Returns the pillar one unit north of the given position if it exists, null otherwise.
 func get_north_neighbor(pillar_position : Vector2i) -> TerrainPillar:
 	if pillar_position.y > 0:

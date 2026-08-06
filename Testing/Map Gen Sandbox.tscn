@@ -8,6 +8,9 @@
 [ext_resource type="Resource" uid="uid://brhmmbwn3542r" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampSouth.tres" id="6_5kd0a"]
 [ext_resource type="Resource" uid="uid://dbnvs5qle0r3j" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampEast.tres" id="7_fbal4"]
 [ext_resource type="Resource" uid="uid://lsk3ywsde8l7" path="res://Scripts/Systems/Terrain Generation/TerrainForms/RampWest.tres" id="8_c6g7b"]
+[ext_resource type="PackedScene" uid="uid://cbeal57vp4pe2" path="res://Units/Pawn.tscn" id="9_5kd0a"]
+[ext_resource type="Script" uid="uid://drl7csu7ppmkn" path="res://Units/PossessedAgent.gd" id="10_fbal4"]
+[ext_resource type="Script" uid="uid://y43fu8mg58hb" path="res://Scripts/Systems/Terrain Generation/Underlying Generation System/TerrainNavAgent.gd" id="11_fbal4"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_pejk7"]
 noise_type = 5
@@ -31,5 +34,16 @@ terrain_color_noise = SubResource("FastNoiseLite_pejk7")
 terrain_noise = SubResource("FastNoiseLite_e5r1k")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1831894962]
-position = Vector2(3976, 2237)
-zoom = Vector2(0.145, 0.145)
+position = Vector2(1904, 1981)
+zoom = Vector2(0.35, 0.35)
+
+[node name="Pawn" parent="." unique_id=1711342334 instance=ExtResource("9_5kd0a")]
+z_index = 1
+script = ExtResource("10_fbal4")
+
+[node name="TerrainNavAgent" type="Node2D" parent="Pawn" unique_id=2064857816 node_paths=PackedStringArray("terrain_gen")]
+script = ExtResource("11_fbal4")
+terrain_gen = NodePath("../..")
+radius = 0.3
+max_step_down = 0.4
+metadata/_custom_type_script = "uid://y43fu8mg58hb"
